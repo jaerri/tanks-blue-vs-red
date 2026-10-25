@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b307wuanbnmoj"]
+
+[ext_resource type="Script" uid="uid://b5nh1twpa03f1" path="res://Scripts/turret.gd" id="1_e65un"]
+[ext_resource type="PackedScene" uid="uid://st8ekhu31wtc" path="res://Scenes/Effects/firing_effect.tscn" id="2_hskch"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1ealj"]
+
+[node name="Turret" type="RigidBody2D" unique_id=413233402]
+use_parent_material = true
+collision_layer = 0
+collision_mask = 0
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_1ealj")
+gravity_scale = 0.0
+center_of_mass_mode = 1
+inertia = 0.03
+angular_damp = 60.0
+script = ExtResource("1_e65un")
+
+[node name="MuzzlePosition" type="Marker2D" parent="." unique_id=421353804]
+position = Vector2(63, 0)
+
+[node name="FiringEffect" parent="MuzzlePosition" unique_id=461974090 instance=ExtResource("2_hskch")]

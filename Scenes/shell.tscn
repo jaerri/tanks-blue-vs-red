@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://deivlglndo82p"]
+
+[ext_resource type="Script" uid="uid://la6h0ahkbjut" path="res://Scripts/shell.gd" id="1_j4ghq"]
+[ext_resource type="Script" uid="uid://erfl1cnnp6gm" path="res://Scripts/Health+Damage/hurtbox.gd" id="2_j4ghq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nitj"]
+size = Vector2(1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6qnyw"]
+
+[node name="Shell" type="Node2D" unique_id=2081780660]
+top_level = true
+script = ExtResource("1_j4ghq")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1147250952]
+self_modulate = Color(0.66656864, 0.6665687, 0.66656864, 1)
+z_index = -1
+color = Color(0.9366326, 0.91794956, 0.7757954, 1)
+offset = Vector2(-4.5, 0)
+polygon = PackedVector2Array(10, 0, 7.9999995, -0.5, -4.7683716e-07, -0.5, -1.0030007, -1, -1.0000005, 1, -4.7683716e-07, 0.5, 7.9999995, 0.5)
+
+[node name="KineticHurtbox" type="Area2D" parent="." unique_id=1227411885]
+position = Vector2(3, 0)
+collision_layer = 256
+script = ExtResource("2_j4ghq")
+metadata/_custom_type_script = "uid://erfl1cnnp6gm"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KineticHurtbox" unique_id=624887461]
+shape = SubResource("RectangleShape2D_4nitj")
+
+[node name="ExplosiveHurtbox" type="Area2D" parent="." unique_id=284842068]
+collision_layer = 512
+collision_mask = 0
+script = ExtResource("2_j4ghq")
+metadata/_custom_type_script = "uid://erfl1cnnp6gm"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosiveHurtbox" unique_id=1028575969]
+shape = SubResource("CircleShape2D_6qnyw")
+disabled = true
+
+[connection signal="body_entered" from="KineticHurtbox" to="." method="_on_kinetic_hurtbox_sth_entered" unbinds=1]

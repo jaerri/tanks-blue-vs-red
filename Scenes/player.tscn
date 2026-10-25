@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cyiumi7i7hvsq"]
+
+[ext_resource type="Script" uid="uid://etti8jh2yl45" path="res://Scripts/Commander/player.gd" id="1_gclb0"]
+[ext_resource type="Texture2D" uid="uid://5fqouufjnevl" path="res://Textures/aimpoint.svg" id="2_mpexe"]
+[ext_resource type="Script" uid="uid://bvdkr0xhitrf0" path="res://Textures/aimpoint.gd" id="3_goyq7"]
+
+[sub_resource type="Gradient" id="Gradient_cvnsp"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.8980392, 0.95686275)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.4392157, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fkybt"]
+gradient = SubResource("Gradient_cvnsp")
+width = 1024
+height = 1024
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mpexe"]
+light_mode = 1
+
+[node name="Player" type="Node2D" unique_id=1686535269]
+script = ExtResource("1_gclb0")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=101463832]
+color = Color(1, 1, 1, 0.9019608)
+blend_mode = 2
+range_item_cull_mask = 3
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_fkybt")
+texture_scale = 0.5
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1231966776]
+zoom = Vector2(2, 2)
+
+[node name="Aimpoint" type="Sprite2D" parent="." unique_id=1696308224]
+top_level = true
+z_index = 10
+material = SubResource("CanvasItemMaterial_mpexe")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_mpexe")
+script = ExtResource("3_goyq7")
+ACTUAL_SCALE = 0.2
