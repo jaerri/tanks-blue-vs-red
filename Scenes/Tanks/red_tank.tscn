@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d4cndyy8tgt0p"]
+
+[ext_resource type="PackedScene" uid="uid://dpd6wmhgbvy8s" path="res://Scenes/tank.tscn" id="1_hn3e0"]
+[ext_resource type="Texture2D" uid="uid://c36kfndge280y" path="res://Textures/Tanks/tank_red_hull.svg" id="2_82qno"]
+[ext_resource type="Texture2D" uid="uid://bj3rbuldvo00e" path="res://Textures/Tanks/tank_red_turret.svg" id="3_8kxjj"]
+[ext_resource type="Texture2D" uid="uid://cpta61ipukte5" path="res://Textures/Tanks/tank_red_gun.svg" id="4_ffes7"]
+
+[node name="RedTank" unique_id=432529071 instance=ExtResource("1_hn3e0")]
+
+[node name="TankRedHull" type="Sprite2D" parent="." index="0" unique_id=1452916528]
+use_parent_material = true
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_82qno")
+
+[node name="TankRedGun" type="Sprite2D" parent="Turret" parent_id_path=PackedInt32Array(413233402) index="0" unique_id=1494472091]
+use_parent_material = true
+position = Vector2(53, 0)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_ffes7")
+
+[node name="TankRedTurret" type="Sprite2D" parent="Turret" parent_id_path=PackedInt32Array(413233402) index="1" unique_id=1525609824]
+z_index = 1
+use_parent_material = true
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_8kxjj")
+
+[editable path="Turret"]

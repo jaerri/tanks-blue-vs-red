@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ShellData" format=3 uid="uid://ba1yi8ubvel5e"]
+
+[ext_resource type="PackedScene" uid="uid://deivlglndo82p" path="res://Scenes/shell.tscn" id="1_423go"]
+[ext_resource type="Curve" uid="uid://dilec6b5llk81" path="res://Data/tank_damage_curve.tres" id="1_h2bne"]
+[ext_resource type="Script" uid="uid://oom4tqxbbqu8" path="res://Data/shell_data.gd" id="1_ha8w5"]
+
+[resource]
+script = ExtResource("1_ha8w5")
+Shell = ExtResource("1_423go")
+FLIGHT_SPEED = 500.0
+MIN_RANGE = 25.0
+MAX_RANGE = 450.0
+RELOAD_SEC = 5.0
+KINETIC_DAMAGE_CURVE = ExtResource("1_h2bne")
+MIN_KINETIC_DAMAGE = 20.0
+MAX_KINETIC_DAMAGE = 40.0
+EXPLOSIVE_DAMAGE = 50.0
+EXPLOSIVE_RANGE = 40.0
+metadata/_custom_type_script = "uid://oom4tqxbbqu8"

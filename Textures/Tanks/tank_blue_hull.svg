@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="247"
+   height="441"
+   viewBox="0 0 247 441"
+   version="1.1"
+   id="svg40"
+   sodipodi:docname="tank_blue_hull.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:c2pa="http://c2pa.org/manifest">
+  <defs
+     id="defs40" />
+  <sodipodi:namedview
+     id="namedview40"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1997768"
+     inkscape:cx="117.9386"
+     inkscape:cy="219.20744"
+     inkscape:window-width="1916"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="blue_hull" />
+  <metadata
+     id="metadata1">
+    <c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmNTA2OTkyZS1mOWI2LTRkZWEtODE2OC01ZWY4OWUxNDExZmEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCFOZsg5iAMuh4+uUQuSvuUAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpmMGE1Yjg0Yi03ZWZkLTQyYjctYmRiMi03YjdmYTA0NThmNGNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNog/oMRMx3JRTuzuZ3jxsLwQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggrEuvgR7DlSgdEc/frTc35RzlG5ywHBXZAZRGLL5Ez1KkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJ4TIrR93vvwjW7wBaZv/pQAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCC0+yqiazj5wjhZ2sKj+lUdj76s/0M53FFWSyy6hlkW42RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiWZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmY1MDY5OTJlLWY5YjYtNGRlYS04MTY4LTVlZjg5ZTE0MTFmYS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjFiMjVmM2I4LWJjNjUtNGM3Ni04NTk2LTkzOTZhNjc0YzZhMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCsS6+BHsOVKB0Rz9+tNzflHOUbnLAcFdkBlEYsvkTPUqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggHXQDjiX53wlj6+rH4d+XILzfFdugTCJURMSsNMjKyzqiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggQ2aeo98+V5MIRkusM2uQ1t5Fra5CvLUAcT9FXHVBO490Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQL6tDo5Qfvdjeb1ndR7S9eJWQqMJgTsPc8fl4NTmpbwY4nWeiz/X85uJiDuNwJGMlWaDBttcKHH8sT7wxT2HD2g=</c2pa:manifest>
+  </metadata>
+  <g
+     id="blue_hull"
+     transform="translate(-99.5,92.5)">
+    <polygon
+       points="442,212 398,250 12,250 4,242 4,14 12,6 398,6 442,44 "
+       fill="#2e4a6b"
+       stroke="#0e1826"
+       stroke-width="3"
+       stroke-linejoin="round"
+       id="polygon1"
+       transform="rotate(90,223,128)" />
+    <polygon
+       points="442,54 6,54 4,14 12,6 398,6 442,44 "
+       fill="#345074"
+       id="polygon2"
+       transform="rotate(90,223,128)" />
+    <polygon
+       points="442,202 6,202 4,242 12,250 398,250 442,212 "
+       fill="#345074"
+       id="polygon3"
+       transform="rotate(90,223,128)" />
+    <line
+       x1="345"
+       y1="-81.790695"
+       x2="297"
+       y2="-81.790695"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line5" />
+    <line
+       x1="149"
+       y1="-81.582329"
+       x2="101"
+       y2="-81.582329"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line6" />
+    <line
+       x1="345"
+       y1="-29"
+       x2="297"
+       y2="-29"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line7" />
+    <line
+       x1="149"
+       y1="-29"
+       x2="101"
+       y2="-29"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line8" />
+    <line
+       x1="345"
+       y1="29"
+       x2="297"
+       y2="29"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line9" />
+    <line
+       x1="149"
+       y1="29"
+       x2="101"
+       y2="29"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line10" />
+    <line
+       x1="345"
+       y1="87"
+       x2="297"
+       y2="87"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line11" />
+    <line
+       x1="149"
+       y1="87"
+       x2="101"
+       y2="87"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line12" />
+    <line
+       x1="345"
+       y1="145"
+       x2="297"
+       y2="145"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line13" />
+    <line
+       x1="149"
+       y1="145"
+       x2="101"
+       y2="145"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line14" />
+    <line
+       x1="345"
+       y1="203"
+       x2="297"
+       y2="203"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line15" />
+    <line
+       x1="149"
+       y1="203"
+       x2="101"
+       y2="203"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line16" />
+    <line
+       x1="345"
+       y1="261"
+       x2="297"
+       y2="261"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line17" />
+    <line
+       x1="149"
+       y1="261"
+       x2="101"
+       y2="261"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line18" />
+    <line
+       x1="345"
+       y1="303"
+       x2="307"
+       y2="347"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line19" />
+    <line
+       x1="101"
+       y1="303"
+       x2="139"
+       y2="347"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line20" />
+    <line
+       x1="345"
+       y1="302.79163"
+       x2="297"
+       y2="302.79163"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line41" />
+    <line
+       x1="297"
+       y1="-89"
+       x2="297"
+       y2="347"
+       stroke="#0e1826"
+       stroke-width="2"
+       id="line21" />
+    <line
+       x1="149"
+       y1="303"
+       x2="101"
+       y2="303"
+       stroke="#1e3048"
+       stroke-width="2"
+       id="line42" />
+    <line
+       x1="149"
+       y1="-89"
+       x2="149"
+       y2="347"
+       stroke="#0e1826"
+       stroke-width="2"
+       id="line22" />
+    <polygon
+       points="14,192 14,64 130,64 130,192 "
+       fill="#142030"
+       stroke="#0e1826"
+       stroke-width="2"
+       stroke-linejoin="round"
+       id="polygon22"
+       transform="rotate(90,223,128)" />
+    <line
+       x1="279"
+       y1="-77"
+       x2="279"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line23" />
+    <line
+       x1="269"
+       y1="-77"
+       x2="269"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line24" />
+    <line
+       x1="259"
+       y1="-77"
+       x2="259"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line25" />
+    <line
+       x1="249"
+       y1="-77"
+       x2="249"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line26" />
+    <line
+       x1="239"
+       y1="-77"
+       x2="239"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line27" />
+    <line
+       x1="229"
+       y1="-77"
+       x2="229"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line28" />
+    <line
+       x1="219"
+       y1="-77"
+       x2="219"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line29" />
+    <line
+       x1="209"
+       y1="-77"
+       x2="209"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line30" />
+    <line
+       x1="199"
+       y1="-77"
+       x2="199"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line31" />
+    <line
+       x1="189"
+       y1="-77"
+       x2="189"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line32" />
+    <line
+       x1="179"
+       y1="-77"
+       x2="179"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line33" />
+    <line
+       x1="169"
+       y1="-77"
+       x2="169"
+       y2="31"
+       stroke="#283e5a"
+       stroke-width="3"
+       id="line34" />
+    <polygon
+       points="367,128 375.5,113.28 392.5,113.28 401,128 392.5,142.72 375.5,142.72 "
+       fill="#8caacd"
+       stroke="#0e1826"
+       stroke-width="2"
+       stroke-linejoin="round"
+       id="polygon37"
+       transform="rotate(90,223,128)" />
+    <polygon
+       points="376,128 380,121.07 388,121.07 392,128 388,134.93 380,134.93 "
+       fill="#142030"
+       id="polygon38"
+       transform="rotate(90,223,128)" />
+    <polygon
+       points="418,100 418,90 432,90 432,100 "
+       fill="#ffec96"
+       stroke="#0e1826"
+       stroke-width="1"
+       stroke-linejoin="round"
+       id="polygon39"
+       transform="rotate(90,223,128)" />
+    <polygon
+       points="418,166 418,156 432,156 432,166 "
+       fill="#ffec96"
+       stroke="#0e1826"
+       stroke-width="1"
+       stroke-linejoin="round"
+       id="polygon40"
+       transform="rotate(90,223,128)" />
+  </g>
+</svg>
