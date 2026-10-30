@@ -15,9 +15,9 @@ commander = NodePath("Player")
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_st81m")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2" unique_id=1592779113]
-scale = Vector2(0.099999994, 0.099999994)
-polygon = PackedVector2Array(119.5, -220.5, -119.5, -220.5, -123.5, -217.1, -123.5, 182.5, -89.5, 220.20001, 90.100006, 220.5, 123.399994, 181.5, 123.5, -217.1)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2" unique_id=1340057427]
+scale = Vector2(0.1, 0.1)
+polygon = PackedVector2Array(-177.5, -331, -185.5, -323.7, -185.5, 270, -132.5, 329.7, -132.5, 331, 133, 331, 185.4, 269, 185.5, -323.7, 177.5, -330.9)
 
 [node name="TurretHitbox" type="CollisionPolygon2D" parent="Hitbox" parent_id_path=PackedInt32Array(871341606) index="0" unique_id=1961801923]
 scale = Vector2(0.1, 0.1)
