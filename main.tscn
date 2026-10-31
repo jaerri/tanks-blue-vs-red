@@ -4,4 +4,6 @@
 
 [node name="Main" type="Node" unique_id=1012492829]
 
-[node name="World" parent="." unique_id=148845647 instance=ExtResource("1_oj8hd")]
+[node name="World2" parent="." unique_id=148845647 instance=ExtResource("1_oj8hd")]
+
+[node name="World" parent="." unique_id=992460705 instance=ExtResource("1_oj8hd")]

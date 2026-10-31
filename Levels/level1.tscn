@@ -5,6 +5,7 @@
 [node name="World" type="Node2D" unique_id=148845647]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1524822595]
+visible = false
 position = Vector2(-12, -17)
 color = Color(0.46618086, 0.4661808, 0.4661808, 1)
 

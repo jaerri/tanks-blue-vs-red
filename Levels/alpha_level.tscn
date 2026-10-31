@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://c8rgapg6ht8an"]
+
+[ext_resource type="PackedScene" uid="uid://bnibdwh56u3sr" path="res://Scenes/MapObjects/floor.tscn" id="1_hc4ar"]
+[ext_resource type="PackedScene" uid="uid://bskeukcg2onbf" path="res://Scenes/MapObjects/wall.tscn" id="1_j0d15"]
+[ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="2_548of"]
+
+[node name="World" type="Node2D" unique_id=148845647]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1524822595]
+visible = false
+position = Vector2(-12, -17)
+color = Color(0.46618086, 0.4661808, 0.4661808, 1)
+
+[node name="Map" type="Node2D" parent="." unique_id=1964588737]
+
+[node name="Floor" parent="Map" unique_id=415627875 instance=ExtResource("1_hc4ar")]
+position = Vector2(226, 1309)
+scale = Vector2(167.51721, 106.6744)
+
+[node name="BorderTop" parent="Map" unique_id=1823649811 instance=ExtResource("1_j0d15")]
+position = Vector2(1200, 20)
+scale = Vector2(75, 1.25)
+
+[node name="BorderBottom" parent="Map" unique_id=1195575072 instance=ExtResource("1_j0d15")]
+position = Vector2(1200, 1580)
+scale = Vector2(75, 1.25)
+
+[node name="BorderLeft" parent="Map" unique_id=1800234466 instance=ExtResource("1_j0d15")]
+position = Vector2(20, 800)
+scale = Vector2(1.2500001, 50)
+
+[node name="BorderRight" parent="Map" unique_id=1973437947 instance=ExtResource("1_j0d15")]
+position = Vector2(2380, 800)
+scale = Vector2(1.2500001, 50)
+
+[node name="BaseWallN" parent="Map" unique_id=1272546756 instance=ExtResource("1_j0d15")]
+position = Vector2(280, 1140)
+scale = Vector2(7.5, 1.25)
+
+[node name="BaseWallE" parent="Map" unique_id=1105805445 instance=ExtResource("1_j0d15")]
+position = Vector2(580, 1400)
+scale = Vector2(1.25, 10)
+
+[node name="Wall1" parent="Map" unique_id=938280853 instance=ExtResource("1_j0d15")]
+position = Vector2(480, 760)
+scale = Vector2(1.25, 10)
+
+[node name="Wall2" parent="Map" unique_id=911953791 instance=ExtResource("1_j0d15")]
+position = Vector2(1080, 760)
+scale = Vector2(10, 1.25)
+
+[node name="Wall3" parent="Map" unique_id=1004306832 instance=ExtResource("1_j0d15")]
+position = Vector2(1600, 880)
+scale = Vector2(1.25, 8.75)
+
+[node name="Wall4" parent="Map" unique_id=1051818195 instance=ExtResource("1_j0d15")]
+position = Vector2(2000, 300)
+scale = Vector2(10, 1.25)
+
+[node name="Wall5" parent="Map" unique_id=40475170 instance=ExtResource("1_j0d15")]
+position = Vector2(1300, 1420)
+scale = Vector2(1.25, 8.75)
+
+[node name="Building1" parent="Map" unique_id=930053588 instance=ExtResource("1_j0d15")]
+modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
+position = Vector2(720.00006, 440)
+scale = Vector2(7.5, 5)
+
+[node name="Polygon2D" parent="Map/Building1" index="0" unique_id=415627875]
+position = Vector2(9.466667, 78.20001)
+color = Color(1, 0, 0, 1)
+
+[node name="Building2" parent="Map" unique_id=765415699 instance=ExtResource("1_j0d15")]
+modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
+position = Vector2(1280, 400)
+scale = Vector2(6.25, 7.5)
+
+[node name="Building3" parent="Map" unique_id=863316081 instance=ExtResource("1_j0d15")]
+modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
+position = Vector2(1880, 640)
+scale = Vector2(7.5, 5)
+
+[node name="Building4" parent="Map" unique_id=1226753664 instance=ExtResource("1_j0d15")]
+modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
+position = Vector2(880, 1080)
+scale = Vector2(7.5, 5)
+
+[node name="Building5" parent="Map" unique_id=1541683991 instance=ExtResource("1_j0d15")]
+modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
+position = Vector2(1680, 1240)
+scale = Vector2(6.25, 6.25)
+
+[node name="Building6" parent="Map" unique_id=2021060633 instance=ExtResource("1_j0d15")]
+modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
+position = Vector2(2120, 1100)
+scale = Vector2(5, 7.5)
+
+[node name="BlueTank" parent="Map" unique_id=432529071 instance=ExtResource("2_548of")]
+position = Vector2(-542, 946)
+
+[editable path="Map/Building1"]
