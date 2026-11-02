@@ -31,6 +31,7 @@ func turn_to(delta: float, pos: Vector2) -> void:
 	if (abs(targetAngle - rot) < TURRET_DEADZONE):
 		#if (randf() < 0.7):
 		set_global_rotation(targetAngle)
+
 		#print("stop")
 	else:
 		# calculate how much to rotate and which direction

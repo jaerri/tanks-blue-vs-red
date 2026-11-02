@@ -4,4 +4,10 @@
 
 [node name="Main" type="Node" unique_id=1012492829]
 
+<<<<<<< HEAD
 [node name="World2" parent="." unique_id=148845647 instance=ExtResource("1_ig7tw")]
+=======
+[node name="World2" parent="." unique_id=148845647 instance=ExtResource("1_oj8hd")]
+
+[node name="World" parent="." unique_id=992460705 instance=ExtResource("1_oj8hd")]
+>>>>>>> refs/remotes/origin/dev

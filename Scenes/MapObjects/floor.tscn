@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bnibdwh56u3sr"]
+
+[node name="Floor" type="Polygon2D" unique_id=415627875]
+color = Color(0.6464189, 0.83009464, 0.69776416, 1)
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)

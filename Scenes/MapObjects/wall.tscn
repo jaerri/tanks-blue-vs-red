@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bskeukcg2onbf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ql73s"]
+size = Vector2(32, 32)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_v0s4m"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[node name="Wall" type="StaticBody2D" unique_id=1800234466]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=415627875]
+color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1184858176]
+shape = SubResource("RectangleShape2D_ql73s")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=218826700]
+occluder = SubResource("OccluderPolygon2D_v0s4m")

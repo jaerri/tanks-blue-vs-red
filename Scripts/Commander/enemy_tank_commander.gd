@@ -3,6 +3,7 @@ extends Commander
 
 @export var DEBUG: bool = false
 @export var STEER_HARDNESS: float = 1.5
+@export var SPOTTING_RANGE: float = 256.0
 @export var TURN_SPEED_CURVE: Curve # x (degrees) -> y (recommended speed)
 
 static func aggressive_drive(tank: Tank, current: float, target: float, distance: float) -> float:
@@ -28,7 +29,6 @@ var after_next := Vector2()
 func drive(delta: float) -> Vector2:
 	if %NavigationAgent2D.is_navigation_finished():
 		return Vector2.ZERO
-	
 	var tank := vehicle as Tank
 	# find next turn angle
 	next = %NavigationAgent2D.get_next_path_position()
@@ -71,8 +71,20 @@ func drive(delta: float) -> Vector2:
 		
 	return Vector2(steer, speed)
 
+var player: Tank = get_tree().get_first_node_in_group("player")
+func _spotting_update() -> void:
+	var tank := vehicle as Tank
+	# do raycast
+	%SpottingRaycast.target_position = to_local(player.global_position)
+	var spotted: bool = (!%SpottingRaycast.is_colliding() and 
+		player.tank_state != player.STATE.DESTROYED and
+		global_position.distance_to(player.global_position) <= SPOTTING_RANGE)
+	
+	# send property to statechart
+	%StateChart.set_expression_property("is_player_spotted", spotted)
+	
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and DEBUG: 
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.is_pressed():
 			%NavigationAgent2D.target_position = get_global_mouse_position()
 
@@ -87,3 +99,18 @@ func _physics_process(delta: float) -> void:
 	tank_input = drive(delta)
 	if DEBUG:
 		queue_redraw()
+
+func _on_engaging_state_entered() -> void:
+	%NavigationAgent2D.target_position = global_position
+
+func _on_engaging_state_physics_processing(delta: float) -> void:
+	commander_target = player.global_position
+	if turret_target.is_equal_approx(player.global_position):
+		fire.emit()
+
+func _on_seek_state_physics_processing(delta: float) -> void:
+	if %StateChart.get_expression_property("is_player_spotted"):
+		%NavigationAgent2D.target_position = player.global_position		
+
+func _on_patrol_state_physics_processing(delta: float) -> void:
+	pass

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://12g3iythjh7b" path="res://Textures/Tanks/tank_blue_gun.svg" id="3_0welw"]
 [ext_resource type="Texture2D" uid="uid://d0kfdphn3ttgd" path="res://Textures/Tanks/tank_blue_turret.svg" id="4_4u8t6"]
 
-[node name="BlueTank" unique_id=432529071 node_paths=PackedStringArray("commander") instance=ExtResource("1_q2wdb")]
+[node name="BlueTank" unique_id=432529071 node_paths=PackedStringArray("commander") groups=["player"] instance=ExtResource("1_q2wdb")]
 commander = NodePath("Player")
 
 [node name="Player" parent="." index="0" unique_id=1686535269 instance=ExtResource("2_0welw")]

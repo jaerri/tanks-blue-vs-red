@@ -24,6 +24,7 @@ node_b = NodePath("../Turret")
 bias = 0.9
 
 [node name="Turret" parent="." unique_id=413233402 instance=ExtResource("3_ensx4")]
+unique_name_in_owner = true
 shell_data = ExtResource("5_c7p7v")
 
 [node name="MuzzlePosition" parent="Turret" index="0" unique_id=421353804]

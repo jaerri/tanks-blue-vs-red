@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cca22k68nupf8"]
+
+[ext_resource type="PackedScene" uid="uid://dpd6wmhgbvy8s" path="res://Scenes/tank.tscn" id="1_hn3e0"]
+[ext_resource type="PackedScene" uid="uid://bq38g7p7stqvo" path="res://Scenes/enemy_tank_commander.tscn" id="2_6hlr3"]
+[ext_resource type="Texture2D" uid="uid://c36kfndge280y" path="res://Textures/Tanks/tank_red_hull.svg" id="2_82qno"]
+[ext_resource type="Texture2D" uid="uid://bj3rbuldvo00e" path="res://Textures/Tanks/tank_red_turret.svg" id="3_8kxjj"]
+[ext_resource type="Texture2D" uid="uid://cpta61ipukte5" path="res://Textures/Tanks/tank_red_gun.svg" id="4_ffes7"]
+
+<<<<<<< HEAD
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7dqip"]
+=======
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_pxno4"]
+light_mode = 2
+
+[node name="RedTank" unique_id=432529071 instance=ExtResource("1_hn3e0")]
+material = SubResource("CanvasItemMaterial_pxno4")
+>>>>>>> refs/remotes/origin/dev
+
+[node name="RedTank" unique_id=432529071 node_paths=PackedStringArray("commander") instance=ExtResource("1_hn3e0")]
+material = SubResource("CanvasItemMaterial_7dqip")
+commander = NodePath("EnemyTankCommander")
+
+[node name="EnemyTankCommander" parent="." index="0" unique_id=2096152682 instance=ExtResource("2_6hlr3")]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Hitbox" parent_id_path=PackedInt32Array(871341606) index="0" unique_id=945282942]
+position = Vector2(4.7683716e-07, -2.3841858e-07)
+scale = Vector2(0.099999994, 0.099999994)
+polygon = PackedVector2Array(-48.5, -226, -59.5, -216.9, -59.5, -208, -113.5, -207.1, -113.5, 176, -70.2, 226, 70, 226, 113.399994, 174, 113.5, -207.8, 59.5, -208, 59.5, -216.9, 49.5, -225.9)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2" unique_id=566249301]
+position = Vector2(4.7683716e-07, -2.3841858e-07)
+scale = Vector2(0.099999994, 0.099999994)
+polygon = PackedVector2Array(-48.5, -226, -59.5, -216.9, -59.5, -208, -113.5, -207.1, -113.5, 176, -70.2, 226, 70, 226, 113.399994, 174, 113.5, -207.8, 59.5, -208, 59.5, -216.9, 49.5, -225.9)
+
+[node name="TankRedHull" type="Sprite2D" parent="." index="3" unique_id=345232483]
+use_parent_material = true
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_82qno")
+
+[node name="TankRedGun" type="Sprite2D" parent="Turret" parent_id_path=PackedInt32Array(413233402) index="0" unique_id=286919015]
+use_parent_material = true
+position = Vector2(26, 0)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_ffes7")
+
+[node name="TankRedTurret" type="Sprite2D" parent="Turret" parent_id_path=PackedInt32Array(413233402) index="1" unique_id=1859543850]
+use_parent_material = true
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_8kxjj")
+
+[editable path="Turret"]

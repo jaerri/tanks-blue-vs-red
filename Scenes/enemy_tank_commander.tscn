@@ -4,11 +4,33 @@
 [ext_resource type="Script" uid="uid://couw105c3bde4" path="res://addons/godot_state_charts/state_chart.gd" id="2_lmsoj"]
 [ext_resource type="Script" uid="uid://jk2jm1g6q853" path="res://addons/godot_state_charts/compound_state.gd" id="3_b3bm4"]
 [ext_resource type="Script" uid="uid://cytafq8i1y8qm" path="res://addons/godot_state_charts/atomic_state.gd" id="4_skqrr"]
+[ext_resource type="Script" uid="uid://cf1nsco3w0mf6" path="res://addons/godot_state_charts/transition.gd" id="5_b3bm4"]
+[ext_resource type="Script" uid="uid://le5w1cm0ul8p" path="res://addons/godot_state_charts/expression_guard.gd" id="6_skqrr"]
 
 [sub_resource type="Curve" id="Curve_ksqnw"]
 _limits = [0.0, 1.0, 0.0, 90.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(10.252018, 0.12454045), -0.01, 0.0, 0, 0, Vector2(90, 0), 0.0, 0.0, 0, 0]
 point_count = 3
+
+[sub_resource type="Resource" id="Resource_jir88"]
+script = ExtResource("6_skqrr")
+expression = "is_player_spotted == true"
+metadata/_custom_type_script = "uid://le5w1cm0ul8p"
+
+[sub_resource type="Resource" id="Resource_b3bm4"]
+script = ExtResource("6_skqrr")
+expression = "is_player_spotted == false"
+metadata/_custom_type_script = "uid://le5w1cm0ul8p"
+
+[sub_resource type="Resource" id="Resource_0tnyv"]
+script = ExtResource("6_skqrr")
+expression = "is_player_spotted == false"
+metadata/_custom_type_script = "uid://le5w1cm0ul8p"
+
+[sub_resource type="Resource" id="Resource_vjxkb"]
+script = ExtResource("6_skqrr")
+expression = "can_engage == true"
+metadata/_custom_type_script = "uid://le5w1cm0ul8p"
 
 [node name="EnemyTankCommander" type="Node2D" unique_id=2096152682]
 script = ExtResource("1_ksqnw")
@@ -29,10 +51,58 @@ metadata/_custom_type_script = "uid://jk2jm1g6q853"
 [node name="Patrol" type="Node" parent="StateChart/Root" unique_id=393362795]
 script = ExtResource("4_skqrr")
 
+[node name="PlayerSpotted" type="Node" parent="StateChart/Root/Patrol" unique_id=372786281]
+script = ExtResource("5_b3bm4")
+to = NodePath("../../Hunt")
+guard = SubResource("Resource_jir88")
+delay_in_seconds = "0.0"
+
+[node name="Hunt" type="Node" parent="StateChart/Root" unique_id=1443127131]
+script = ExtResource("3_b3bm4")
+initial_state = NodePath("Engaging")
+
+[node name="Engaging" type="Node" parent="StateChart/Root/Hunt" unique_id=1075148907]
+script = ExtResource("4_skqrr")
+
+[node name="PlayerLeave" type="Node" parent="StateChart/Root/Hunt/Engaging" unique_id=1248952749]
+script = ExtResource("5_b3bm4")
+to = NodePath("../../Seek")
+guard = SubResource("Resource_b3bm4")
+delay_in_seconds = "0.5"
+
+[node name="Seek" type="Node" parent="StateChart/Root/Hunt" unique_id=1494845185]
+script = ExtResource("4_skqrr")
+
+[node name="BackToPatrol" type="Node" parent="StateChart/Root/Hunt/Seek" unique_id=1683130769]
+script = ExtResource("5_b3bm4")
+to = NodePath("../../../Patrol")
+guard = SubResource("Resource_0tnyv")
+delay_in_seconds = "2.0"
+
+[node name="Engage" type="Node" parent="StateChart/Root/Hunt/Seek" unique_id=704352755]
+script = ExtResource("5_b3bm4")
+to = NodePath("../../Engaging")
+guard = SubResource("Resource_vjxkb")
+delay_in_seconds = "0.0"
+
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1807152094]
 unique_name_in_owner = true
 target_desired_distance = 20.0
 path_max_distance = 20.0
 debug_enabled = true
 
-[connection signal="path_changed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_path_changed"]
+[node name="SpottingTimer" type="Timer" parent="." unique_id=468208571]
+process_callback = 0
+wait_time = 0.5
+autostart = true
+
+[node name="SpottingRaycast" type="RayCast2D" parent="." unique_id=2032625203]
+unique_name_in_owner = true
+target_position = Vector2(0, 0)
+
+[connection signal="state_physics_processing" from="StateChart/Root/Patrol" to="." method="_on_patrol_state_physics_processing"]
+[connection signal="state_entered" from="StateChart/Root/Hunt/Engaging" to="." method="_on_engaging_state_entered"]
+[connection signal="state_physics_processing" from="StateChart/Root/Hunt/Engaging" to="." method="_on_engaging_state_physics_processing"]
+[connection signal="state_physics_processing" from="StateChart/Root/Hunt/Seek" to="." method="_on_seek_state_physics_processing"]
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="timeout" from="SpottingTimer" to="." method="_spotting_update"]
