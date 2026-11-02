@@ -66,7 +66,7 @@ func _physics_process(delta: float) -> void:
 
 func _on_hitbox_die() -> void:
 	destroyed.emit()
-	modulate = Color.INDIAN_RED
+	modulate = Color.DIM_GRAY
 	process_mode = Node.PROCESS_MODE_DISABLED
 
 func _on_hitbox_health_changed(old: float, new: float) -> void:

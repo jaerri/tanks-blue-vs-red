@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("3_msqul")
 Shell = ExtResource("2_rs3c8")
-FLIGHT_SPEED = 450.0
+FLIGHT_SPEED = 250.0
 MIN_RANGE = 10.0
 MAX_RANGE = 500.0
 RELOAD_SEC = 6.0
