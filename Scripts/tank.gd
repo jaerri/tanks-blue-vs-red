@@ -1,7 +1,7 @@
 class_name Tank
 extends CharacterBody2D
 
-enum STATE { RUNNING, MAINTENANCE, DESTROYED }
+signal destroyed
 
 @export var ENGINE_POWER := 75.0
 @export var STEER_POWER := 1.0
@@ -14,7 +14,6 @@ enum STATE { RUNNING, MAINTENANCE, DESTROYED }
 		$Turret.commander = value
 		commander = value
 		commander.vehicle = self
-@export var tank_state: STATE = STATE.RUNNING
 
 # https://www.desmos.com/calculator/nkfahemaxk
 func SPEED_CURVE(t: float) -> float:
@@ -58,10 +57,17 @@ func apply_tank_movement(delta: float) -> void:
 	move_and_slide()
 	
 func _physics_process(delta: float) -> void:
-	match tank_state:
-		STATE.RUNNING:
-			# movement
-			#print(commander.tank_input)
-			# get the input from commander
-			accelerate(delta, commander.tank_input * Vector2(1, -1))
-			apply_tank_movement(delta)
+	# movement
+	#print(commander.tank_input)
+	# get the input from commander
+	accelerate(delta, commander.tank_input * Vector2(1, -1))
+	apply_tank_movement(delta)
+
+
+func _on_hitbox_die() -> void:
+	destroyed.emit()
+	modulate = Color.INDIAN_RED
+	process_mode = Node.PROCESS_MODE_DISABLED
+
+func _on_hitbox_health_changed(old: float, new: float) -> void:
+	%ProgressBar.value = new

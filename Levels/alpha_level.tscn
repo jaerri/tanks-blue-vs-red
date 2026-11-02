@@ -3,15 +3,24 @@
 [ext_resource type="PackedScene" uid="uid://bnibdwh56u3sr" path="res://Scenes/MapObjects/floor.tscn" id="1_hc4ar"]
 [ext_resource type="PackedScene" uid="uid://bskeukcg2onbf" path="res://Scenes/MapObjects/wall.tscn" id="1_j0d15"]
 [ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="2_548of"]
+[ext_resource type="PackedScene" uid="uid://d4cndyy8tgt0p" path="res://Scenes/Tanks/red_tank.tscn" id="4_g5wo5"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_hc4ar"]
+vertices = PackedVector2Array(2415, 1615, 2463.6094, 1641.1406, -27.992188, 1664.8516, -15, 1615, -27, -32.960938, -15, -15, 2421.3594, -27.03125, 2415, -15, 1825, 335, 2015, 545, 1745, 545, 1395, 535, 1395, 265, 2025, 1235, 2215, 1235, 1795, 1355, 2345, 55, 2345, 1545, 2215, 965, 2175, 335, 2175, 265, 2025, 965, 2015, 735, 55, 55, 1825, 265, 1795, 1125, 1635, 1035, 1635, 725, 1745, 735, 1565, 1125, 1565, 1035, 1335, 1545, 1565, 1355, 1335, 1265, 1265, 1265, 1015, 1175, 1015, 985, 1565, 725, 1255, 795, 1255, 725, 515, 935, 905, 795, 855, 535, 905, 725, 515, 585, 585, 535, 1165, 265, 745, 985, 1165, 535, 855, 345, 585, 345, 745, 1175, 615, 1225, 545, 1225, 415, 1175, 415, 1105, 445, 935, 1265, 1545, 615, 1545, 545, 1545, 55, 1545, 145, 1175, 145, 1105, 445, 585)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(5, 4, 6, 7), PackedInt32Array(7, 6, 1, 0), PackedInt32Array(8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 17, 14, 18), PackedInt32Array(16, 18, 19, 20), PackedInt32Array(19, 18, 21, 22, 9), PackedInt32Array(23, 16, 20, 24), PackedInt32Array(8, 19, 9), PackedInt32Array(13, 15, 25, 21), PackedInt32Array(21, 25, 26, 27, 28), PackedInt32Array(26, 25, 29, 30), PackedInt32Array(14, 17, 31, 15), PackedInt32Array(32, 15, 31), PackedInt32Array(32, 31, 33, 29), PackedInt32Array(29, 33, 34, 35, 36, 30), PackedInt32Array(37, 30, 38, 39, 11), PackedInt32Array(38, 30, 36, 40, 41), PackedInt32Array(42, 43, 41, 40, 44, 45), PackedInt32Array(24, 8, 12), PackedInt32Array(23, 24, 12), PackedInt32Array(23, 12, 46), PackedInt32Array(40, 36, 47), PackedInt32Array(46, 48, 43, 42, 49), PackedInt32Array(23, 46, 49, 50), PackedInt32Array(40, 47, 51, 52, 53, 54, 55, 56), PackedInt32Array(51, 35, 34, 57, 58, 52), PackedInt32Array(54, 53, 59, 60, 61), PackedInt32Array(61, 60, 23, 62), PackedInt32Array(11, 10, 28, 27), PackedInt32Array(28, 22, 21), PackedInt32Array(11, 27, 37), PackedInt32Array(48, 11, 39, 43), PackedInt32Array(56, 55, 62, 23, 63), PackedInt32Array(63, 23, 50, 45, 44)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-42, -48, -43, 1680, 2479, 1656, 2436, -42)])
+parsed_geometry_type = 1
+source_geometry_mode = 2
+agent_radius = 15.0
 
 [node name="World" type="Node2D" unique_id=148845647]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1524822595]
-visible = false
 position = Vector2(-12, -17)
 color = Color(0.46618086, 0.4661808, 0.4661808, 1)
 
 [node name="Map" type="Node2D" parent="." unique_id=1964588737]
+metadata/_edit_lock_ = true
 
 [node name="Floor" parent="Map" unique_id=415627875 instance=ExtResource("1_hc4ar")]
 position = Vector2(226, 1309)
@@ -66,7 +75,7 @@ modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(720.00006, 440)
 scale = Vector2(7.5, 5)
 
-[node name="Polygon2D" parent="Map/Building1" index="0" unique_id=415627875]
+[node name="Polygon2D" parent="Map/Building1" index="2" unique_id=415627875]
 position = Vector2(9.466667, 78.20001)
 color = Color(1, 0, 0, 1)
 
@@ -95,7 +104,24 @@ modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(2120, 1100)
 scale = Vector2(5, 7.5)
 
-[node name="BlueTank" parent="Map" unique_id=432529071 instance=ExtResource("2_548of")]
-position = Vector2(-542, 946)
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=783808949 groups=["navigation_polygon_source_geometry_group"]]
+navigation_polygon = SubResource("NavigationPolygon_hc4ar")
+
+[node name="BlueTank" parent="." unique_id=432529071 instance=ExtResource("2_548of")]
+position = Vector2(363, 1214)
+
+[node name="RedTank" parent="." unique_id=391761971 instance=ExtResource("4_g5wo5")]
+position = Vector2(2066, 158)
+
+[node name="RedTank2" parent="." unique_id=1525346520 instance=ExtResource("4_g5wo5")]
+position = Vector2(718, 654)
+
+[node name="PatrolPath1" type="Polygon2D" parent="." unique_id=790123034 groups=["enemy_patrol_paths"]]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1593, 337, 871, 953, 615, 665, 2027, 444, 2215, 1437, 1446, 1180, 1076, 637, 344, 645, 933, 1279, 1721, 849, 151, 280)
+
+[node name="PatrolPath2" type="Polygon2D" parent="." unique_id=885421194 groups=["enemy_patrol_paths"]]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(374, 807, 1737, 627, 1997, 1067, 608, 618, 1487, 1341, 2257, 947, 1415, 223, 682, 195, 933, 1279, 1327, 345, 151, 280)
 
 [editable path="Map/Building1"]

@@ -8,7 +8,7 @@
 script = ExtResource("1_ha8w5")
 Shell = ExtResource("1_423go")
 FLIGHT_SPEED = 500.0
-MIN_RANGE = 25.0
+MIN_RANGE = 10.0
 MAX_RANGE = 450.0
 RELOAD_SEC = 5.0
 KINETIC_DAMAGE_CURVE = ExtResource("1_h2bne")

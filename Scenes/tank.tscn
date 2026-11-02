@@ -5,6 +5,16 @@
 [ext_resource type="Resource" uid="uid://ba1yi8ubvel5e" path="res://Data/blue_std_shell.tres" id="5_c7p7v"]
 [ext_resource type="Script" uid="uid://7gl15wn6xyhf" path="res://Scripts/Health+Damage/hitbox.gd" id="5_n7usw"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_evf4h"]
+bg_color = Color(0.7825932, 0.45191908, 0.38973013, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fn16i"]
+bg_color = Color(0.37773842, 0.6554755, 0.4683594, 1)
+
+[sub_resource type="Theme" id="Theme_42q8f"]
+ProgressBar/styles/background = SubResource("StyleBoxFlat_evf4h")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_fn16i")
+
 [node name="Tank" type="CharacterBody2D" unique_id=177441930]
 collision_layer = 2
 collision_mask = 3
@@ -30,6 +40,20 @@ shell_data = ExtResource("5_c7p7v")
 [node name="MuzzlePosition" parent="Turret" index="0" unique_id=421353804]
 position = Vector2(90, 0)
 
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1375046487]
+unique_name_in_owner = true
+offset_left = 2.0
+offset_top = -11.0
+offset_right = 68.0
+offset_bottom = 1.0
+scale = Vector2(0.25, 0.25)
+theme = SubResource("Theme_42q8f")
+step = 1.0
+value = 100.0
+show_percentage = false
+
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_area_entered"]
+[connection signal="die" from="Hitbox" to="." method="_on_hitbox_die"]
+[connection signal="health_changed" from="Hitbox" to="." method="_on_hitbox_health_changed"]
 
 [editable path="Turret"]

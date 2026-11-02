@@ -5,6 +5,8 @@ extends Commander
 @export var STEER_HARDNESS: float = 1.5
 @export var SPOTTING_RANGE: float = 256.0
 @export var TURN_SPEED_CURVE: Curve # x (degrees) -> y (recommended speed)
+@export var FIRING_TOLERANCE: float = 45.0
+@export var REACTION_TIME: float = 0.4
 
 static func aggressive_drive(tank: Tank, current: float, target: float, distance: float) -> float:
 	var best_distance_to_target := (
@@ -19,7 +21,7 @@ static func aggressive_drive(tank: Tank, current: float, target: float, distance
 	if distance > best_distance_to_target:
 		return -1
 	else:
-		print("braking")
+		#print("braking")
 		return 1
 
 var steer := 0.0
@@ -71,17 +73,19 @@ func drive(delta: float) -> Vector2:
 		
 	return Vector2(steer, speed)
 
-var player: Tank = get_tree().get_first_node_in_group("player")
+@onready var player: Tank = get_tree().get_first_node_in_group("player")
+var last_player_pos: Vector2
 func _spotting_update() -> void:
 	var tank := vehicle as Tank
 	# do raycast
 	%SpottingRaycast.target_position = to_local(player.global_position)
-	var spotted: bool = (!%SpottingRaycast.is_colliding() and 
-		player.tank_state != player.STATE.DESTROYED and
-		global_position.distance_to(player.global_position) <= SPOTTING_RANGE)
 	
+	var spotted: bool = (!%SpottingRaycast.is_colliding() and 
+		global_position.distance_to(player.global_position) <= SPOTTING_RANGE)
 	# send property to statechart
 	%StateChart.set_expression_property("is_player_spotted", spotted)
+	if spotted:
+		last_player_pos = player.global_position
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and DEBUG: 
@@ -102,15 +106,34 @@ func _physics_process(delta: float) -> void:
 
 func _on_engaging_state_entered() -> void:
 	%NavigationAgent2D.target_position = global_position
-
+var aimed_time := 0.0
 func _on_engaging_state_physics_processing(delta: float) -> void:
 	commander_target = player.global_position
-	if turret_target.is_equal_approx(player.global_position):
-		fire.emit()
+	#### still need to check max range
+	####
+	if turret_target.distance_to(player.global_position) < FIRING_TOLERANCE:
+		if aimed_time >= REACTION_TIME:
+			fire.emit()
+		else:
+			aimed_time += delta * randf() 
 
-func _on_seek_state_physics_processing(delta: float) -> void:
-	if %StateChart.get_expression_property("is_player_spotted"):
-		%NavigationAgent2D.target_position = player.global_position		
+func _on_seek_state_entered() -> void:
+	%NavigationAgent2D.target_position = last_player_pos
+	
+var patrol_path: PackedVector2Array
+var patrol_idx: int
+func _on_patrol_state_entered() -> void:
+	var paths := get_tree().get_nodes_in_group("enemy_patrol_paths")
+	patrol_path = (paths[randi_range(0, paths.size()-1)] as Polygon2D).polygon
+	patrol_idx = randi_range(0, patrol_path.size()-1) 
 
 func _on_patrol_state_physics_processing(delta: float) -> void:
-	pass
+	if %NavigationAgent2D.is_navigation_finished():
+		%NavigationAgent2D.target_position = patrol_path[patrol_idx]
+		if patrol_idx == patrol_path.size()-1:
+			_on_patrol_state_entered()	
+		else:
+			patrol_idx += 1
+		
+func _on_navigation_agent_2d_navigation_finished() -> void:
+	%StateChart.send_event("navigation_finished")
