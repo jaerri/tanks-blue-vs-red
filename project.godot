@@ -40,6 +40,10 @@ folder_colors={
 "res://temp/": "gray"
 }
 
+[global_group]
+
+navigation_polygon_source_geometry_group=""
+
 [input]
 
 left={
