@@ -27,12 +27,6 @@ polygon = PackedVector2Array(162, -48.4, 128, -99.5, 128, -102.5, -83.7, -102.5,
 scale = Vector2(0.1, 0.1)
 polygon = PackedVector2Array(119.5, -220.5, -119.5, -220.5, -123.5, -217.1, -123.5, 182.5, -89.5, 220.20001, 90.100006, 220.5, 123.399994, 181.5, 123.5, -217.1)
 
-[node name="RightTrack" parent="." index="4" unique_id=1324928752]
-position = Vector2(-10, 0)
-
-[node name="LeftTrack" parent="." index="5" unique_id=1897714446]
-position = Vector2(10, 0)
-
 [node name="TankBlueGun" type="Sprite2D" parent="Turret" parent_id_path=PackedInt32Array(413233402) index="0" unique_id=527349090]
 position = Vector2(30, 0)
 scale = Vector2(0.1, 0.1)

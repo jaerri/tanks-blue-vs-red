@@ -5,9 +5,8 @@
 [ext_resource type="Script" uid="uid://bvdkr0xhitrf0" path="res://Textures/aimpoint.gd" id="3_goyq7"]
 
 [sub_resource type="Gradient" id="Gradient_cvnsp"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.8980392, 0.95686275)
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.4392157, 0, 0, 0, 0)
+offsets = PackedFloat32Array(0, 0.74121094, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.92, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_fkybt"]
 gradient = SubResource("Gradient_cvnsp")

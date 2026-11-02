@@ -18,30 +18,17 @@ var actual_aimpoint: Vector2:
 		commander.turret_target = val # update commander where we are aiming at
 		actual_aimpoint = val
 
-var _body: Node2D
-var body_last_rotation: float
-var additional_rotation: float:
-	get():
-		if _body:
-			set_deferred("body_last_rotation", _body.rotation)
-			return _body.rotation - body_last_rotation
-		else:
-			return 0.0
-
 func turn_to(delta: float, pos: Vector2) -> void:
 	# get the current rotation of the current
 	var rot: float = global_rotation
 	# get the rotation from the turret to the mouse position
 	var targetAngle: float = global_position.angle_to_point(pos)
 	
-	# makes the turret rotates with the body (if there is)
-	rotate(additional_rotation)
-	
 	#print("mouse: ", pos)
 	#print("rot: ", rad_to_deg(rot))
 	#print("target: ", rad_to_deg(targetAngle))
 	# fix the turret to target angle if close enough
-	if (abs(targetAngle - rot) < TURRET_DEADZONE && abs(additional_rotation) < TURRET_DEADZONE):
+	if (abs(targetAngle - rot) < TURRET_DEADZONE):
 		#if (randf() < 0.7):
 		set_global_rotation(targetAngle)
 		#print("stop")
@@ -91,8 +78,6 @@ func change_pitch(delta: float, target: Vector2) -> void:
 	actual_aimpoint = starting_pos + Vector2.from_angle($MuzzlePosition.global_rotation) * fly_distance
 
 func _ready() -> void:
-	_body = self.get_parent()
-	body_last_rotation = _body.rotation
 	# listen to when commander orders to fire
 	fly_distance = shell_data.MAX_RANGE / 2
 

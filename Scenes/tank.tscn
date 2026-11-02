@@ -5,15 +5,11 @@
 [ext_resource type="Resource" uid="uid://ba1yi8ubvel5e" path="res://Data/blue_std_shell.tres" id="5_c7p7v"]
 [ext_resource type="Script" uid="uid://7gl15wn6xyhf" path="res://Scripts/Health+Damage/hitbox.gd" id="5_n7usw"]
 
-[node name="Tank" type="RigidBody2D" unique_id=432529071]
+[node name="Tank" type="CharacterBody2D" unique_id=177441930]
 collision_layer = 2
 collision_mask = 3
-mass = 0.75
-gravity_scale = 0.0
-center_of_mass_mode = 1
-inertia = 450.0
-linear_damp = 4.0
-angular_damp = 3.0
+motion_mode = 1
+wall_min_slide_angle = 0.7853982
 script = ExtResource("1_ensx4")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=871341606]
@@ -21,12 +17,6 @@ collision_layer = 0
 collision_mask = 256
 script = ExtResource("5_n7usw")
 metadata/_custom_type_script = "uid://7gl15wn6xyhf"
-
-[node name="RightTrack" type="Marker2D" parent="." unique_id=1324928752]
-position = Vector2(-17, 0)
-
-[node name="LeftTrack" type="Marker2D" parent="." unique_id=1897714446]
-position = Vector2(17, 0)
 
 [node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=1910043889]
 node_a = NodePath("..")
