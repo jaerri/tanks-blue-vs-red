@@ -5,6 +5,9 @@
 [ext_resource type="Resource" uid="uid://ba1yi8ubvel5e" path="res://Data/blue_std_shell.tres" id="5_c7p7v"]
 [ext_resource type="Script" uid="uid://7gl15wn6xyhf" path="res://Scripts/Health+Damage/hitbox.gd" id="5_n7usw"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2nc7w"]
+light_mode = 2
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_evf4h"]
 bg_color = Color(0.7825932, 0.45191908, 0.38973013, 1)
 
@@ -52,6 +55,7 @@ scale = Vector2(0.25, 0.25)
 
 [node name="ProgressBar" type="ProgressBar" parent="Node2D" unique_id=1375046487]
 unique_name_in_owner = true
+material = SubResource("CanvasItemMaterial_2nc7w")
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5

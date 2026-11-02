@@ -4,3 +4,4 @@
 /android/
 addons/godot-neovim
 temp/
+.exports/
