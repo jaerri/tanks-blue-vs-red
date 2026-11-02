@@ -43,4 +43,6 @@ position = Vector2(46, 0)
 remote_path = NodePath("../../Hitbox/TurretHitbox")
 update_scale = false
 
+[connection signal="destroyed" from="." to="Player" method="_on_tank_destroyed"]
+
 [editable path="Turret"]

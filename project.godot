@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Tank! Blue VS Red"
-run/main_scene="uid://db3x6hhv5s5yi"
+run/main_scene="uid://s3lx15vl2kuf"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 run/max_fps=60
 config/icon="res://icon.svg"
@@ -36,6 +36,7 @@ folder_colors={
 "res://Scripts/": "teal",
 "res://Sounds/": "red",
 "res://Textures/": "green",
+"res://UI/": "purple",
 "res://addons/": "gray",
 "res://temp/": "gray"
 }

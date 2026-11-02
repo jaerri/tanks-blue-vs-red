@@ -6,7 +6,9 @@ func _ready():
 	$QuitButton.pressed.connect(_on_quit_pressed)
 
 func _on_play_pressed():
-	print("PLAY button clicked!")
+	print("Entering alpha level!")
+	get_tree().change_scene_to_file("res://Levels/alpha_level.tscn")
+	
 
 func _on_instructions_pressed():
 	get_tree().change_scene_to_file("res://UI/instructions_menu.tscn")
