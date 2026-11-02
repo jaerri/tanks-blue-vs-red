@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bs5yynyeuj8dv"]
+
+[ext_resource type="Script" uid="uid://dfkg0ol4uenh6" path="res://UI/end_screen.gd" id="1_f6iv1"]
+
+[node name="EndScreen" type="Control" unique_id=463435239]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f6iv1")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1160815679]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09019608, 0.16862746, 0.3019608, 1)
+
+[node name="ResultLabel" type="Label" parent="." unique_id=166742572]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -138.0
+offset_right = 138.0
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "GAME OVER
+"
+
+[node name="PlayAgainButton" type="Button" parent="." unique_id=308067497]
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 0
+offset_left = 471.0
+offset_top = 91.0
+offset_right = 691.0
+offset_bottom = 151.0
+theme_override_font_sizes/font_size = 24
+text = "PLAY AGAIN
+"
+
+[node name="MainMenuButton" type="Button" parent="." unique_id=1601069357]
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 0
+offset_left = 474.0
+offset_top = 181.0
+offset_right = 694.0
+offset_bottom = 241.0
+theme_override_font_sizes/font_size = 24
+text = "MAIN MENU
+
+"

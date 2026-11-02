@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://s3lx15vl2kuf"]
+
+[ext_resource type="Script" uid="uid://ryfmogi7b8hl" path="res://UI/main_menu.gd" id="1_p8ccj"]
+
+[node name="MainMenu" type="Control" unique_id=897752408]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p8ccj")
+
+[node name="Background" type="ColorRect" parent="." unique_id=627662994]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = -4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09019608, 0.16862746, 0.3019608, 1)
+
+[node name="Label" type="Label" parent="." unique_id=874943830]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -197.5
+offset_right = 197.5
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "TANKS! BLUE VS RED
+"
+
+[node name="PlayButton" type="Button" parent="." unique_id=56883008]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -30.0
+offset_right = 100.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "PLAY
+"
+
+[node name="InstructionsButton" type="Button" parent="." unique_id=195220693]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = 52.0
+offset_right = 103.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "INSTRUCTIONS
+
+"
+
+[node name="QuitButton" type="Button" parent="." unique_id=619834549]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = 136.0
+offset_right = 104.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "QUIT
+
+
+"
