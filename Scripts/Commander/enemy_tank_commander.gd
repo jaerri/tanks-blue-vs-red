@@ -44,10 +44,10 @@ func drive(delta: float) -> Vector2:
 	
 	# heading vectors
 	var current_heading := next - global_position
-	var next_path := after_next - next
+	var next_heading := after_next - next
 	
 	# the angles
-	var next_angle_diff := current_heading.angle_to(next_path)
+	var next_angle_diff := current_heading.angle_to(next_heading)
 	var current_angle_diff := global_transform.y.angle_to(current_heading)
 	
 	# movement 

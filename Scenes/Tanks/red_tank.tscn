@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://cpta61ipukte5" path="res://Textures/Tanks/tank_red_gun.svg" id="4_ffes7"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7dqip"]
-light_mode = 2
 
 [node name="RedTank" unique_id=432529071 node_paths=PackedStringArray("commander") groups=["enemy"] instance=ExtResource("1_hn3e0")]
 material = SubResource("CanvasItemMaterial_7dqip")
@@ -16,6 +15,7 @@ ENGINE_POWER = 70.0
 commander = NodePath("EnemyTankCommander")
 
 [node name="EnemyTankCommander" parent="." index="0" unique_id=2096152682 instance=ExtResource("2_6hlr3")]
+DEBUG = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Hitbox" parent_id_path=PackedInt32Array(871341606) index="0" unique_id=945282942]
 position = Vector2(4.7683716e-07, -2.3841858e-07)

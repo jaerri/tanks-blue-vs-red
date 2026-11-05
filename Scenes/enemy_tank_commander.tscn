@@ -34,7 +34,6 @@ metadata/_custom_type_script = "uid://le5w1cm0ul8p"
 
 [node name="EnemyTankCommander" type="Node2D" unique_id=2096152682]
 script = ExtResource("1_ksqnw")
-DEBUG = true
 TURN_SPEED_CURVE = SubResource("Curve_ksqnw")
 metadata/_custom_type_script = "uid://jvhgqajqwg35"
 
