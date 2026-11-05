@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://s3lx15vl2kuf"]
 
 [ext_resource type="Script" uid="uid://ryfmogi7b8hl" path="res://UI/main_menu.gd" id="1_p8ccj"]
+[ext_resource type="AudioStream" uid="uid://cbv8ymmydmhg7" path="res://Sounds/menu_music.wav" id="2_tk8dj"]
 
 [node name="MainMenu" type="Control" unique_id=897752408]
 layout_mode = 3
@@ -10,6 +11,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p8ccj")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=292125299]
+stream = ExtResource("2_tk8dj")
+autoplay = true
 
 [node name="Background" type="ColorRect" parent="." unique_id=627662994]
 layout_mode = 1

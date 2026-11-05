@@ -18,11 +18,11 @@ agent_radius = 15.0
 script = ExtResource("1_01e7i")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1524822595]
+visible = false
 position = Vector2(-12, -17)
 color = Color(0.46618086, 0.4661808, 0.4661808, 1)
 
 [node name="Map" type="Node2D" parent="." unique_id=1964588737]
-metadata/_edit_lock_ = true
 
 [node name="Floor" parent="Map" unique_id=415627875 instance=ExtResource("1_hc4ar")]
 position = Vector2(226, 1309)
@@ -77,10 +77,6 @@ modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(720.00006, 440)
 scale = Vector2(7.5, 5)
 
-[node name="Polygon2D" parent="Map/Building1" index="2" unique_id=415627875]
-position = Vector2(9.466667, 78.20001)
-color = Color(1, 0, 0, 1)
-
 [node name="Building2" parent="Map" unique_id=765415699 instance=ExtResource("1_j0d15")]
 modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(1280, 400)
@@ -121,6 +117,9 @@ position = Vector2(718, 654)
 [node name="RedTank3" parent="." unique_id=198334206 instance=ExtResource("4_g5wo5")]
 position = Vector2(1432, 1209)
 
+[node name="Camera2D" type="Camera2D" parent="RedTank3" unique_id=1978206562]
+zoom = Vector2(2, 2)
+
 [node name="PatrolPath1" type="Polygon2D" parent="." unique_id=790123034 groups=["enemy_patrol_paths"]]
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(1593, 337, 871, 953, 615, 665, 2027, 444, 2215, 1437, 1446, 1180, 1076, 637, 344, 645, 933, 1279, 1721, 849, 151, 280)
@@ -130,5 +129,3 @@ metadata/_edit_lock_ = true
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(374, 807, 1737, 627, 1997, 1067, 608, 618, 1487, 1341, 2257, 947, 1415, 223, 682, 195, 933, 1279, 1327, 345, 151, 280)
 metadata/_edit_lock_ = true
-
-[editable path="Map/Building1"]

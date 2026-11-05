@@ -31,6 +31,7 @@ texture = SubResource("GradientTexture2D_fkybt")
 texture_scale = 0.5
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1231966776]
+enabled = false
 zoom = Vector2(2, 2)
 
 [node name="Aimpoint" type="Sprite2D" parent="." unique_id=1696308224]
