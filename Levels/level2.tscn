@@ -62,14 +62,10 @@ scale = Vector2(1.25, 6.25)
 position = Vector2(2000, 620)
 scale = Vector2(6.25, 1.25)
 
-[node name="Building1" parent="." unique_id=2023569743 instance=ExtResource("2_m135w")]
+[node name="Building1" parent="." unique_id=1557164567 instance=ExtResource("2_m135w")]
 modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(420, 420)
 scale = Vector2(6.25, 5)
-
-[node name="Polygon2D" parent="Building1" index="2" unique_id=415627875]
-position = Vector2(9.466667, 78.20001)
-color = Color(1, 0, 0, 1)
 
 [node name="Building2" parent="." unique_id=922762824 instance=ExtResource("2_m135w")]
 modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
@@ -83,5 +79,3 @@ scale = Vector2(6.25, 6.25)
 
 [node name="BlueTank" parent="." unique_id=432529071 instance=ExtResource("3_m135w")]
 position = Vector2(195, 1309)
-
-[editable path="Building1"]
