@@ -17,12 +17,16 @@ agent_radius = 15.0
 [node name="World" type="Node2D" unique_id=148845647]
 script = ExtResource("1_01e7i")
 
+[node name="DebugCamera" type="Camera2D" parent="." unique_id=216892053]
+anchor_mode = 0
+enabled = false
+zoom = Vector2(0.4, 0.4)
+
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1524822595]
-visible = false
-position = Vector2(-12, -17)
 color = Color(0.46618086, 0.4661808, 0.4661808, 1)
 
-[node name="Map" type="Node2D" parent="." unique_id=1964588737]
+[node name="Map" type="Node2D" parent="." unique_id=1610093461]
+metadata/_edit_lock_ = true
 
 [node name="Floor" parent="Map" unique_id=415627875 instance=ExtResource("1_hc4ar")]
 position = Vector2(226, 1309)
@@ -102,8 +106,18 @@ modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(2120, 1100)
 scale = Vector2(5, 7.5)
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=783808949 groups=["navigation_polygon_source_geometry_group"]]
+[node name="EnemyNavigation" type="Node" parent="." unique_id=385169798]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="EnemyNavigation" unique_id=783808949 groups=["navigation_polygon_source_geometry_group"]]
 navigation_polygon = SubResource("NavigationPolygon_hc4ar")
+
+[node name="PatrolPath1" type="Polygon2D" parent="EnemyNavigation" unique_id=790123034 groups=["enemy_patrol_paths"]]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1593, 337, 871, 953, 615, 665, 2027, 444, 2215, 1437, 1446, 1180, 1076, 637, 344, 645, 933, 1279, 1721, 849, 151, 280)
+
+[node name="PatrolPath2" type="Polygon2D" parent="EnemyNavigation" unique_id=885421194 groups=["enemy_patrol_paths"]]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(374, 807, 1737, 627, 1997, 1067, 608, 618, 1487, 1341, 2257, 947, 1415, 223, 682, 195, 933, 1279, 1327, 345, 151, 280)
 
 [node name="BlueTank" parent="." unique_id=432529071 instance=ExtResource("2_548of")]
 position = Vector2(363, 1214)
@@ -116,16 +130,3 @@ position = Vector2(718, 654)
 
 [node name="RedTank3" parent="." unique_id=198334206 instance=ExtResource("4_g5wo5")]
 position = Vector2(1432, 1209)
-
-[node name="Camera2D" type="Camera2D" parent="RedTank3" unique_id=1978206562]
-zoom = Vector2(2, 2)
-
-[node name="PatrolPath1" type="Polygon2D" parent="." unique_id=790123034 groups=["enemy_patrol_paths"]]
-color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(1593, 337, 871, 953, 615, 665, 2027, 444, 2215, 1437, 1446, 1180, 1076, 637, 344, 645, 933, 1279, 1721, 849, 151, 280)
-metadata/_edit_lock_ = true
-
-[node name="PatrolPath2" type="Polygon2D" parent="." unique_id=885421194 groups=["enemy_patrol_paths"]]
-color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(374, 807, 1737, 627, 1997, 1067, 608, 618, 1487, 1341, 2257, 947, 1415, 223, 682, 195, 933, 1279, 1327, 345, 151, 280)
-metadata/_edit_lock_ = true

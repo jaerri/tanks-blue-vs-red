@@ -15,7 +15,6 @@ ENGINE_POWER = 70.0
 commander = NodePath("EnemyTankCommander")
 
 [node name="EnemyTankCommander" parent="." index="0" unique_id=2096152682 instance=ExtResource("2_6hlr3")]
-DEBUG = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Hitbox" parent_id_path=PackedInt32Array(871341606) index="0" unique_id=945282942]
 position = Vector2(4.7683716e-07, -2.3841858e-07)
