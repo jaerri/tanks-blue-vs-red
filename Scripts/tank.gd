@@ -64,7 +64,13 @@ func _physics_process(delta: float) -> void:
 	apply_tank_movement(delta)
 
 
+var destruction_effect_played := false
+
 func _on_hitbox_die() -> void:
+	if destruction_effect_played:
+		return
+	destruction_effect_played = true
+	EffectSpawner.spawn_combat_effect(global_position, true)
 	destroyed.emit()
 	modulate = Color.DIM_GRAY
 	process_mode = Node.PROCESS_MODE_DISABLED

@@ -18,3 +18,13 @@ func spawn(scene: PackedScene, update_position_to_node: Node2D) -> void:
 	
 
 	
+
+
+# Effects live independently so disabling a destroyed tank cannot stop them.
+func spawn_combat_effect(at: Vector2, tank_explosion: bool = false) -> Node2D:
+	var effect := Node2D.new()
+	effect.set_script(load("res://Scripts/combat_effect.gd"))
+	effect.set("tank_explosion", tank_explosion)
+	get_tree().root.add_child(effect)
+	effect.global_position = at
+	return effect

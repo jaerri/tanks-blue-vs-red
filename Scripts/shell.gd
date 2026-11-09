@@ -44,9 +44,9 @@ func explode():
 	destroy(explosive_hit_effect)
 
 func kinetic_hit_effect() -> void:
-	pass
+	EffectSpawner.spawn_combat_effect(global_position, false)
 func explosive_hit_effect() -> void:
-	pass
+	EffectSpawner.spawn_combat_effect(global_position, false)
 
 # get kinetic also means shell has hit, destroy
 func get_kinetic_damage(hitbox: Hitbox) -> float:
