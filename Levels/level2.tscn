@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dwd2pps8tckkd"]
+
+[ext_resource type="PackedScene" uid="uid://bnibdwh56u3sr" path="res://Scenes/MapObjects/floor.tscn" id="1_ty1rc"]
+[ext_resource type="PackedScene" uid="uid://bskeukcg2onbf" path="res://Scenes/MapObjects/wall.tscn" id="2_m135w"]
+[ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="3_m135w"]
+
+[node name="Level2" type="Node2D" unique_id=592257539]
+
+[node name="Floor" parent="." unique_id=415627875 instance=ExtResource("1_ty1rc")]
+position = Vector2(-464.99994, 1245)
+scale = Vector2(167.51721, 106.6744)
+
+[node name="BorderTop" parent="." unique_id=1800234466 instance=ExtResource("2_m135w")]
+position = Vector2(1200, 20)
+scale = Vector2(75, 1.25)
+
+[node name="BorderBottom" parent="." unique_id=1374405887 instance=ExtResource("2_m135w")]
+position = Vector2(1200, 1580)
+scale = Vector2(75, 1.25)
+
+[node name="BorderLeft" parent="." unique_id=1347017656 instance=ExtResource("2_m135w")]
+position = Vector2(20, 800)
+scale = Vector2(1.2500001, 50)
+
+[node name="BorderRight" parent="." unique_id=602573716 instance=ExtResource("2_m135w")]
+position = Vector2(2380, 800)
+scale = Vector2(1.2500001, 50)
+
+[node name="Cover1" parent="." unique_id=799541282 instance=ExtResource("2_m135w")]
+position = Vector2(560, 1100)
+scale = Vector2(5, 1.25)
+
+[node name="Cover2" parent="." unique_id=1094716023 instance=ExtResource("2_m135w")]
+position = Vector2(880, 1360)
+scale = Vector2(1.25, 5)
+
+[node name="Cover3" parent="." unique_id=1740174894 instance=ExtResource("2_m135w")]
+position = Vector2(760, 760)
+scale = Vector2(1.25, 6.25)
+
+[node name="Cover4" parent="." unique_id=1335330021 instance=ExtResource("2_m135w")]
+position = Vector2(1160, 1100)
+scale = Vector2(6.25, 1.25)
+
+[node name="Cover5" parent="." unique_id=1427956710 instance=ExtResource("2_m135w")]
+position = Vector2(1440, 1360)
+scale = Vector2(5, 1.25)
+
+[node name="Cover6" parent="." unique_id=1168525631 instance=ExtResource("2_m135w")]
+position = Vector2(1240, 680)
+scale = Vector2(1.25, 6.25)
+
+[node name="Cover7" parent="." unique_id=1853110289 instance=ExtResource("2_m135w")]
+position = Vector2(1640, 960)
+scale = Vector2(7.5, 1.25)
+
+[node name="SandBang1" parent="." unique_id=1335162353 instance=ExtResource("2_m135w")]
+position = Vector2(1640, 300)
+scale = Vector2(1.25, 6.25)
+
+[node name="SandBang2" parent="." unique_id=376725429 instance=ExtResource("2_m135w")]
+position = Vector2(2000, 620)
+scale = Vector2(6.25, 1.25)
+
+[node name="Building1" parent="." unique_id=2023569743 instance=ExtResource("2_m135w")]
+modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
+position = Vector2(420, 420)
+scale = Vector2(6.25, 5)
+
+[node name="Polygon2D" parent="Building1" index="2" unique_id=415627875]
+position = Vector2(9.466667, 78.20001)
+color = Color(1, 0, 0, 1)
+
+[node name="Building2" parent="." unique_id=922762824 instance=ExtResource("2_m135w")]
+modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
+position = Vector2(1000, 300)
+scale = Vector2(5, 6.25)
+
+[node name="Building3" parent="." unique_id=1899680221 instance=ExtResource("2_m135w")]
+modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
+position = Vector2(2060, 1080)
+scale = Vector2(6.25, 6.25)
+
+[node name="BlueTank" parent="." unique_id=432529071 instance=ExtResource("3_m135w")]
+position = Vector2(195, 1309)
+
+[editable path="Building1"]
