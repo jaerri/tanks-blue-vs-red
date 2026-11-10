@@ -5,17 +5,22 @@
 [ext_resource type="Texture2D" uid="uid://bf0g8cc4y2hvb" path="res://Textures/Tanks/tank_blue_hull.svg" id="2_st81m"]
 [ext_resource type="Texture2D" uid="uid://12g3iythjh7b" path="res://Textures/Tanks/tank_blue_gun.svg" id="3_0welw"]
 [ext_resource type="Texture2D" uid="uid://d0kfdphn3ttgd" path="res://Textures/Tanks/tank_blue_turret.svg" id="4_4u8t6"]
+[ext_resource type="Script" uid="uid://ca82xql7ofh2f" path="res://Scripts/ammo_counter.gd" id="6_x6rne"]
 
 [node name="BlueTank" unique_id=432529071 node_paths=PackedStringArray("commander") groups=["player"] instance=ExtResource("1_q2wdb")]
 commander = NodePath("Player")
 
 [node name="Player" parent="." index="0" unique_id=1686535269 instance=ExtResource("2_0welw")]
 
-[node name="TankBlueHull" type="Sprite2D" parent="." index="1" unique_id=63939819]
+[node name="AmmoCount" type="Node" parent="." index="1" unique_id=1922709883]
+script = ExtResource("6_x6rne")
+metadata/_custom_type_script = "uid://ca82xql7ofh2f"
+
+[node name="TankBlueHull" type="Sprite2D" parent="." index="2" unique_id=63939819]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_st81m")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2" unique_id=1380685633]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="3" unique_id=1380685633]
 scale = Vector2(0.1, 0.1)
 polygon = PackedVector2Array(119.5, -220.5, -119.5, -220.5, -123.5, -217.1, -123.5, 182.5, -89.5, 220.20001, 90.100006, 220.5, 123.399994, 181.5, 123.5, -217.1)
 
@@ -43,6 +48,6 @@ position = Vector2(46, 0)
 remote_path = NodePath("../../Hitbox/TurretHitbox")
 update_scale = false
 
-[connection signal="destroyed" from="." to="Player" method="_on_tank_destroyed"]
+[connection signal="destroy" from="." to="Player" method="_on_tank_destroy"]
 
 [editable path="Turret"]

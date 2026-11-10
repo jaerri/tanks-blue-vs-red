@@ -40,6 +40,9 @@ metadata/_custom_type_script = "uid://jvhgqajqwg35"
 [node name="StateChart" type="Node" parent="." unique_id=1144300233]
 unique_name_in_owner = true
 script = ExtResource("2_lmsoj")
+initial_expression_properties = {
+"is_player_spotted": false
+}
 metadata/_custom_type_script = "uid://couw105c3bde4"
 
 [node name="Root" type="Node" parent="StateChart" unique_id=7062605]
@@ -89,7 +92,6 @@ delay_in_seconds = "0.0"
 unique_name_in_owner = true
 target_desired_distance = 20.0
 path_max_distance = 20.0
-debug_enabled = true
 
 [node name="SpottingTimer" type="Timer" parent="." unique_id=468208571]
 process_callback = 0

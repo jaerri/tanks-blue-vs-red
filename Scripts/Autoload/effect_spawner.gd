@@ -15,10 +15,6 @@ func spawn(scene: PackedScene, update_position_to_node: Node2D) -> void:
 			effect.emitting = false	
 		)
 		effect.finished.connect(effect.queue_free)
-	
-
-	
-
 
 # Effects live independently so disabling a destroyed tank cannot stop them.
 func spawn_combat_effect(at: Vector2, tank_explosion: bool = false) -> Node2D:

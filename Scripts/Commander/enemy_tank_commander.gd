@@ -137,3 +137,8 @@ func _on_patrol_state_physics_processing(delta: float) -> void:
 		
 func _on_navigation_agent_2d_navigation_finished() -> void:
 	%StateChart.send_event("navigation_finished")
+	
+func _on_red_tank_destroy(tank: Tank) -> void:
+	# welp nothing to do
+	# destroy to stop 
+	queue_free()	

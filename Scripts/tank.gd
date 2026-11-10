@@ -1,7 +1,7 @@
 class_name Tank
 extends CharacterBody2D
 
-signal destroyed
+signal destroy(tank: Tank)
 
 @export var ENGINE_POWER := 75.0
 @export var STEER_POWER := 1.0
@@ -13,7 +13,8 @@ signal destroyed
 		# let the turret knows who our new commander object is
 		$Turret.commander = value
 		commander = value
-		commander.vehicle = self
+		if commander: 
+			commander.vehicle = self
 
 # https://www.desmos.com/calculator/nkfahemaxk
 func SPEED_CURVE(t: float) -> float:
@@ -26,7 +27,7 @@ func SPEED_CURVE_DX(t: float) -> float:
 var speed := 0.0 # -1 backward, 1 forward
 var steer := 0.0 # -1 left, 1 right
 
-func simulate_rpm(current: float, target: float, max: float, delta: float) -> float:
+func _simulate_rpm(current: float, target: float, max: float, delta: float) -> float:
 	if is_zero_approx(target):
 		return move_toward(current, 0.0, delta)
 	elif (current * (max - current) < 0): 
@@ -38,14 +39,14 @@ func simulate_rpm(current: float, target: float, max: float, delta: float) -> fl
 		# normal acceleration
 		return move_toward(current, max, delta * abs(target))
 	
-func accelerate(delta: float, input: Vector2) -> void:
+func _accelerate(delta: float, input: Vector2) -> void:
 	# movement
-	speed = simulate_rpm(speed, input.y, MAX_SPEED * sign(input.y), delta)
+	speed = _simulate_rpm(speed, input.y, MAX_SPEED * sign(input.y), delta)
 	# steering
 	#steer = simulate_rpm(steer, input.x, MAX_STEER * sign(input.x), delta)
 	steer = input.x
 
-func apply_tank_movement(delta: float) -> void:	
+func _apply_tank_movement(delta: float) -> void:	
 	velocity = global_transform.y * SPEED_CURVE(speed) * ENGINE_POWER
 	rotate(
 		STEER_POWER * delta * steer
@@ -60,20 +61,24 @@ func _physics_process(delta: float) -> void:
 	# movement
 	#print(commander.tank_input)
 	# get the input from commander
-	accelerate(delta, commander.tank_input * Vector2(1, -1))
-	apply_tank_movement(delta)
+	if commander:
+		_accelerate(delta, commander.tank_input * Vector2(1, -1))
+		_apply_tank_movement(delta)
 
-
-var destruction_effect_played := false
-
+var destroyed: bool = false;
 func _on_hitbox_die() -> void:
-	if destruction_effect_played:
+	if destroyed:
 		return
-	destruction_effect_played = true
+	destroyed = true
+	# remove commanders aka disable the tank
+	commander = null
+	
+	# destruction effects
 	EffectSpawner.spawn_combat_effect(global_position, true)
-	destroyed.emit()
 	modulate = Color.DIM_GRAY
-	process_mode = Node.PROCESS_MODE_DISABLED
+
+	# tell everybd we are dead
+	destroy.emit(self)
 
 func _on_hitbox_health_changed(old: float, new: float) -> void:
 	%ProgressBar.value = new

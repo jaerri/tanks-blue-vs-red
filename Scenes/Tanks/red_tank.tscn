@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cpta61ipukte5" path="res://Textures/Tanks/tank_red_gun.svg" id="4_ffes7"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7dqip"]
+light_mode = 2
 
 [node name="RedTank" unique_id=432529071 node_paths=PackedStringArray("commander") groups=["enemy"] instance=ExtResource("1_hn3e0")]
 material = SubResource("CanvasItemMaterial_7dqip")
@@ -44,5 +45,7 @@ texture = ExtResource("4_ffes7")
 use_parent_material = true
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_8kxjj")
+
+[connection signal="destroy" from="." to="EnemyTankCommander" method="_on_red_tank_destroy"]
 
 [editable path="Turret"]

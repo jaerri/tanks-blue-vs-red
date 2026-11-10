@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bs5yynyeuj8dv"]
 
-[ext_resource type="Script" uid="uid://dfkg0ol4uenh6" path="res://UI/end_screen.gd" id="1_f6iv1"]
+[ext_resource type="Script" uid="uid://dfkg0ol4uenh6" path="res://UI/Components/end_screen.gd" id="1_f6iv1"]
 
 [node name="EndScreen" type="Control" unique_id=463435239]
 layout_mode = 3

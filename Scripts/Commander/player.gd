@@ -19,6 +19,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("fire"):
 		fire.emit()
 
-func _on_tank_destroyed() -> void:
+func _on_tank_destroy(tank: Tank) -> void:
 	await get_tree().create_timer(1).timeout # wait 1 sec
-	get_tree().change_scene_to_file("res://UI/end_screen.tscn")
+	get_tree().change_scene_to_file("res://UI/Components/end_screen.tscn")

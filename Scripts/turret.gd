@@ -3,10 +3,12 @@ extends RigidBody2D
 
 @export var TURRET_TURN_POWER := 100.0
 @export var shell_data: ShellData
+@export var ammo_counter: AmmoCounter
 @export var commander: Commander:
 	set(value):
 		commander = value
-		commander.fire.connect(fire)
+		if commander:
+			commander.fire.connect(fire)
 var turret_target := Vector2()
 
 const TURRET_DEADZONE := deg_to_rad(1)
@@ -83,7 +85,7 @@ func _ready() -> void:
 	fly_distance = shell_data.MAX_RANGE / 2
 
 func _physics_process(delta: float) -> void:
-	if (commander != null):
+	if commander:
 		turn_to(delta, commander.commander_target)
 		change_pitch(delta, commander.commander_target)
 	

@@ -11,7 +11,7 @@ func _on_play_pressed():
 	
 
 func _on_instructions_pressed():
-	get_tree().change_scene_to_file("res://UI/instructions_menu.tscn")
+	get_tree().change_scene_to_file("res://UI/Components/instructions_menu.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()
