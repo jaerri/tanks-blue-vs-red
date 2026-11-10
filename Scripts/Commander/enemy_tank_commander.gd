@@ -28,7 +28,7 @@ var steer := 0.0
 var speed := 0.0
 var next := Vector2()
 var after_next := Vector2()
-func drive(delta: float) -> Vector2:
+func drive() -> Vector2:
 	if %NavigationAgent2D.is_navigation_finished():
 		return Vector2.ZERO
 	var tank := vehicle as Tank
@@ -76,7 +76,6 @@ func drive(delta: float) -> Vector2:
 @onready var player: Tank = get_tree().get_first_node_in_group("player")
 var last_player_pos: Vector2
 func _spotting_update() -> void:
-	var tank := vehicle as Tank
 	# do raycast
 	%SpottingRaycast.target_position = to_local(player.global_position)
 	
@@ -97,10 +96,10 @@ func _draw() -> void:
 		draw_line(Vector2(), Vector2(speed, -steer).rotated(rotation - PI/2) * 50, Color.YELLOW, 1.0)
 		draw_line(to_local(next), to_local(after_next), Color.BLUE, 2.0)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if not vehicle:
 		return
-	tank_input = drive(delta)
+	tank_input = drive()
 	if DEBUG:
 		queue_redraw()
 
@@ -127,7 +126,7 @@ func _on_patrol_state_entered() -> void:
 	patrol_path = (paths[randi_range(0, paths.size()-1)] as Polygon2D).polygon
 	patrol_idx = randi_range(0, patrol_path.size()-1) 
 
-func _on_patrol_state_physics_processing(delta: float) -> void:
+func _on_patrol_state_physics_processing(_delta: float) -> void:
 	if %NavigationAgent2D.is_navigation_finished():
 		%NavigationAgent2D.target_position = patrol_path[patrol_idx]
 		if patrol_idx == patrol_path.size()-1:
@@ -138,7 +137,7 @@ func _on_patrol_state_physics_processing(delta: float) -> void:
 func _on_navigation_agent_2d_navigation_finished() -> void:
 	%StateChart.send_event("navigation_finished")
 	
-func _on_red_tank_destroy(tank: Tank) -> void:
+func _on_red_tank_destroy(_tank: Tank) -> void:
 	# welp nothing to do
 	# destroy to stop 
 	queue_free()	

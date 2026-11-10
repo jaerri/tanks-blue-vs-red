@@ -27,17 +27,17 @@ func SPEED_CURVE_DX(t: float) -> float:
 var speed := 0.0 # -1 backward, 1 forward
 var steer := 0.0 # -1 left, 1 right
 
-func _simulate_rpm(current: float, target: float, max: float, delta: float) -> float:
+func _simulate_rpm(current: float, target: float, maximum: float, delta: float) -> float:
 	if is_zero_approx(target):
 		return move_toward(current, 0.0, delta)
-	elif (current * (max - current) < 0): 
+	elif (current * (maximum - current) < 0): 
 		# decide if brake
 		# make sure that value is heading towards zero
 		# i think i just recreated xor
-		return move_toward(current, max, delta * BRAKE_POWER)
+		return move_toward(current, maximum, delta * BRAKE_POWER)
 	else:
 		# normal acceleration
-		return move_toward(current, max, delta * abs(target))
+		return move_toward(current, maximum, delta * abs(target))
 	
 func _accelerate(delta: float, input: Vector2) -> void:
 	# movement
@@ -80,5 +80,5 @@ func _on_hitbox_die() -> void:
 	# tell everybd we are dead
 	destroy.emit(self)
 
-func _on_hitbox_health_changed(old: float, new: float) -> void:
+func _on_hitbox_health_changed(_old: float, new: float) -> void:
 	%ProgressBar.value = new

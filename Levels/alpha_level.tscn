@@ -120,7 +120,7 @@ color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(374, 807, 1737, 627, 1997, 1067, 608, 618, 1487, 1341, 2257, 947, 1415, 223, 682, 195, 933, 1279, 1327, 345, 151, 280)
 
 [node name="BlueTank" parent="." unique_id=432529071 instance=ExtResource("2_548of")]
-position = Vector2(363, 1214)
+position = Vector2(406, 1258)
 
 [node name="RedTank" parent="." unique_id=391761971 instance=ExtResource("4_g5wo5")]
 position = Vector2(2066, 158)

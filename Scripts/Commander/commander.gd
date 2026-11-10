@@ -1,6 +1,7 @@
 class_name Commander
 extends Node2D
 
+@warning_ignore("unused_signal")
 signal fire()
 
 var vehicle: PhysicsBody2D

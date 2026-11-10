@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_ha8w5")
-Shell = ExtResource("1_423go")
+shell = ExtResource("1_423go")
 FLIGHT_SPEED = 200.0
 MIN_RANGE = 10.0
 MAX_RANGE = 450.0

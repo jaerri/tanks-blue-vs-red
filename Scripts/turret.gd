@@ -47,7 +47,7 @@ func fire() -> void:
 	if reloading:
 		return
 	# create shell
-	var shell: Shell = shell_data.Shell.instantiate()
+	var shell: Shell = shell_data.shell.instantiate()
 	shell.global_position = $MuzzlePosition.global_position
 	# setup to fire where we looking
 	add_child(shell)

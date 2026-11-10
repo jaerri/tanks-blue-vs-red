@@ -1,7 +1,7 @@
 class_name ShellData
 extends Resource
 
-@export var Shell: PackedScene
+@export var shell: PackedScene
 @export var FLIGHT_SPEED: float
 @export var MIN_RANGE: float
 @export var MAX_RANGE: float

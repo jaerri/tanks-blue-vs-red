@@ -49,7 +49,7 @@ func explosive_hit_effect() -> void:
 	EffectSpawner.spawn_combat_effect(global_position, false)
 
 # get kinetic also means shell has hit, destroy
-func get_kinetic_damage(hitbox: Hitbox) -> float:
+func get_kinetic_damage(_hitbox: Hitbox) -> float:
 	print("dist: ", total_distance)
 	print("range ratio: " + str(total_distance/data.MAX_RANGE))
 	print("kinetic ratio: " + str(data.KINETIC_DAMAGE_CURVE.sample(total_distance / data.MAX_RANGE)))
