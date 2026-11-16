@@ -1,7 +1,7 @@
 extends Control
 
-@export var instructions_menu: PackedScene
 @export var level: PackedScene
+@export var instructions_menu: PackedScene
 
 func _ready():
 	$PlayButton.pressed.connect(_on_play_pressed)

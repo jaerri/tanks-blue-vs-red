@@ -1,6 +1,5 @@
 extends Node2D
 
-const END_SCREEN = preload("uid://bs5yynyeuj8dv")
 var remaining := 0 
 
 # Called when the node enters the scene tree for the first time.
