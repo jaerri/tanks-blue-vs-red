@@ -1,5 +1,6 @@
 extends Node2D
 
+const END_SCREEN = preload("uid://bs5yynyeuj8dv")
 var remaining := 0 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,6 +16,6 @@ func _on_enemy_destroy(tank: Tank) -> void:
 		win()
 		
 func win() -> void:
-	print("alpha level won!")
+	print(self.name + " won!")
 	await get_tree().create_timer(1).timeout # wait 1 sec
 	get_tree().change_scene_to_file("res://UI/Components/end_screen.tscn")

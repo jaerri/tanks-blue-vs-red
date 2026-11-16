@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bs5yynyeuj8dv"]
 
 [ext_resource type="Script" uid="uid://dfkg0ol4uenh6" path="res://UI/Components/end_screen.gd" id="1_f6iv1"]
+[ext_resource type="PackedScene" uid="uid://s3lx15vl2kuf" path="res://UI/main_menu.tscn" id="2_4c1h5"]
+[ext_resource type="PackedScene" uid="uid://c8rgapg6ht8an" path="res://Levels/level1.tscn" id="3_gn77q"]
 
 [node name="EndScreen" type="Control" unique_id=463435239]
 layout_mode = 3
@@ -10,6 +12,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f6iv1")
+main_menu = ExtResource("2_4c1h5")
+last_level = ExtResource("3_gn77q")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1160815679]
 layout_mode = 1
