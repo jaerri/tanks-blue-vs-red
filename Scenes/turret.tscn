@@ -21,3 +21,7 @@ script = ExtResource("1_e65un")
 position = Vector2(63, 0)
 
 [node name="FiringEffect" parent="MuzzlePosition" unique_id=461974090 instance=ExtResource("2_hskch")]
+
+[node name="ReloadTimer" type="Timer" parent="." unique_id=2057832275]
+wait_time = 4.0
+one_shot = true

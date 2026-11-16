@@ -12,7 +12,7 @@ light_mode = 2
 bg_color = Color(0.7825932, 0.45191908, 0.38973013, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fn16i"]
-bg_color = Color(0.37773842, 0.6554755, 0.4683594, 1)
+bg_color = Color(0.41960785, 0.8, 0.17254902, 1)
 
 [sub_resource type="Theme" id="Theme_42q8f"]
 ProgressBar/styles/background = SubResource("StyleBoxFlat_evf4h")

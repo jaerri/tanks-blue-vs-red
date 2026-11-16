@@ -122,6 +122,9 @@ polygon = PackedVector2Array(374, 807, 1737, 627, 1997, 1067, 608, 618, 1487, 13
 [node name="BlueTank" parent="." unique_id=432529071 instance=ExtResource("2_548of")]
 position = Vector2(406, 1258)
 
+[node name="Node2D" parent="BlueTank" index="7" unique_id=999534001]
+position = Vector2(406, 1258)
+
 [node name="RedTank" parent="." unique_id=391761971 instance=ExtResource("4_g5wo5")]
 position = Vector2(2066, 158)
 
@@ -130,3 +133,6 @@ position = Vector2(718, 654)
 
 [node name="RedTank3" parent="." unique_id=198334206 instance=ExtResource("4_g5wo5")]
 position = Vector2(1432, 1209)
+
+[editable path="BlueTank"]
+[editable path="BlueTank/Turret"]

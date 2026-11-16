@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dpd6wmhgbvy8s" path="res://Scenes/tank.tscn" id="1_q2wdb"]
 [ext_resource type="PackedScene" uid="uid://cyiumi7i7hvsq" path="res://Scenes/player.tscn" id="2_0welw"]
+[ext_resource type="PackedScene" uid="uid://dexqfg32fxxew" path="res://UI/in_game.tscn" id="2_evf4h"]
 [ext_resource type="Texture2D" uid="uid://bf0g8cc4y2hvb" path="res://Textures/Tanks/tank_blue_hull.svg" id="2_st81m"]
 [ext_resource type="Texture2D" uid="uid://12g3iythjh7b" path="res://Textures/Tanks/tank_blue_gun.svg" id="3_0welw"]
 [ext_resource type="Texture2D" uid="uid://d0kfdphn3ttgd" path="res://Textures/Tanks/tank_blue_turret.svg" id="4_4u8t6"]
@@ -10,11 +11,13 @@
 [node name="BlueTank" unique_id=432529071 node_paths=PackedStringArray("commander") groups=["player"] instance=ExtResource("1_q2wdb")]
 commander = NodePath("Player")
 
-[node name="Player" parent="." index="0" unique_id=1686535269 instance=ExtResource("2_0welw")]
+[node name="HUD" parent="." index="0" unique_id=67240621 instance=ExtResource("2_evf4h")]
 
-[node name="AmmoCount" type="Node" parent="." index="1" unique_id=1922709883]
-script = ExtResource("6_x6rne")
-metadata/_custom_type_script = "uid://ca82xql7ofh2f"
+[node name="ReloadIndicator" parent="HUD" index="0" unique_id=66730392 node_paths=PackedStringArray("ammo_counter", "reload_timer")]
+ammo_counter = NodePath("../../Turret/AmmoCount")
+reload_timer = NodePath("../../Turret/ReloadTimer")
+
+[node name="Player" parent="." index="1" unique_id=1686535269 instance=ExtResource("2_0welw")]
 
 [node name="TankBlueHull" type="Sprite2D" parent="." index="2" unique_id=63939819]
 scale = Vector2(0.1, 0.1)
@@ -32,22 +35,31 @@ polygon = PackedVector2Array(162, -48.4, 128, -99.5, 128, -102.5, -83.7, -102.5,
 scale = Vector2(0.1, 0.1)
 polygon = PackedVector2Array(119.5, -220.5, -119.5, -220.5, -123.5, -217.1, -123.5, 182.5, -89.5, 220.20001, 90.100006, 220.5, 123.399994, 181.5, 123.5, -217.1)
 
-[node name="TankBlueGun" type="Sprite2D" parent="Turret" parent_id_path=PackedInt32Array(413233402) index="0" unique_id=527349090]
+[node name="Turret" parent="." index="6" unique_id=413233402 node_paths=PackedStringArray("ammo_counter")]
+ammo_counter = NodePath("AmmoCount")
+
+[node name="AmmoCount" type="Node" parent="Turret" index="0" unique_id=1922709883]
+script = ExtResource("6_x6rne")
+remaining = 10
+metadata/_custom_type_script = "uid://ca82xql7ofh2f"
+
+[node name="TankBlueGun" type="Sprite2D" parent="Turret" index="1" unique_id=527349090]
 position = Vector2(30, 0)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("3_0welw")
 
-[node name="TankBlueTurret" type="Sprite2D" parent="Turret" parent_id_path=PackedInt32Array(413233402) index="1" unique_id=1072446585]
+[node name="TankBlueTurret" type="Sprite2D" parent="Turret" index="2" unique_id=1072446585]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_4u8t6")
 
-[node name="MuzzlePosition" parent="Turret" parent_id_path=PackedInt32Array(413233402) index="2" unique_id=421353804]
+[node name="MuzzlePosition" parent="Turret" index="3" unique_id=421353804]
 position = Vector2(46, 0)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Turret" parent_id_path=PackedInt32Array(413233402) index="3" unique_id=566501578]
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Turret" index="4" unique_id=566501578]
 remote_path = NodePath("../../Hitbox/TurretHitbox")
 update_scale = false
 
 [connection signal="destroy" from="." to="Player" method="_on_tank_destroy"]
 
+[editable path="HUD"]
 [editable path="Turret"]

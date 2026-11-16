@@ -10,6 +10,7 @@ extends RigidBody2D
 		if commander:
 			commander.fire.connect(fire)
 var turret_target := Vector2()
+var reload_timer: Timer
 
 const TURRET_DEADZONE := deg_to_rad(1)
 const PITCH_DEADZONE := 1.0 
@@ -41,11 +42,16 @@ func turn_to(delta: float, pos: Vector2) -> void:
 		#print("rotate ", "right" if torque > 0 else "left")
 		apply_torque(torque)
 
-var reloading := false
 func fire() -> void:
-	# cooldown
-	if reloading:
+	# reload
+	if not reload_timer.is_stopped():
 		return
+	# out of ammo	
+	if ammo_counter:
+		if not ammo_counter.change_ammo(-1):
+			print("out of ammo!")
+			return
+		
 	# create shell
 	var shell: Shell = shell_data.shell.instantiate()
 	shell.global_position = $MuzzlePosition.global_position
@@ -58,12 +64,8 @@ func fire() -> void:
 	EffectSpawner.spawn(BULLET_TRAIL, shell)	
 	
 	# reload mechanic
-	reloading = true
 	print("reloading...")	
-	get_tree().create_timer(shell_data.RELOAD_SEC).timeout.connect(func():
-		reloading = false
-		print("up")
-	)
+	reload_timer.start()
 
 @export var GUN_PITCH_RATE := 200.0
 var fly_distance: float
@@ -81,7 +83,9 @@ func change_pitch(delta: float, target: Vector2) -> void:
 	actual_aimpoint = starting_pos + Vector2.from_angle($MuzzlePosition.global_rotation) * fly_distance
 
 func _ready() -> void:
-	# listen to when commander orders to fire
+	assert(shell_data)
+	reload_timer = $ReloadTimer
+	reload_timer.wait_time = shell_data.RELOAD_SEC
 	fly_distance = shell_data.MAX_RANGE / 2
 
 func _physics_process(delta: float) -> void:

@@ -1,15 +1,13 @@
 class_name AmmoCounter
 extends Node
 
-var remaining: int
+signal ammo_change
+@export var remaining: int
 
-func add_ammo(count: int) -> void:
-	if count > 0:
-		remaining += count
-
-func use_ammo() -> bool:
+func change_ammo(count: int) -> bool:
 	if remaining > 0:
-		remaining -= 1
+		remaining += count
+		ammo_change.emit()
 		return true
 	else:
 		return false

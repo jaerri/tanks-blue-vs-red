@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dexqfg32fxxew"]
+
+[ext_resource type="PackedScene" uid="uid://w0sxknwlucj3" path="res://UI/Components/ammo_indicator.tscn" id="1_qfnjf"]
+
+[node name="HUD" type="CanvasLayer" unique_id=67240621]
+
+[node name="ReloadIndicator" parent="." unique_id=66730392 instance=ExtResource("1_qfnjf")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -62.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(1, 1)
