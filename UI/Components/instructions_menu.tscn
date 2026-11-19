@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://87jf173rjfjq"]
 
 [ext_resource type="Script" uid="uid://cwja3l60oq5kp" path="res://UI/Components/instructions_menu.gd" id="1_jooyl"]
-[ext_resource type="PackedScene" uid="uid://dexqfg32fxxew" path="res://UI/in_game.tscn" id="2_usux6"]
 
 [node name="InstructionsMenu" type="Control" unique_id=1070546242]
 layout_mode = 3
@@ -11,7 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jooyl")
-main_menu = ExtResource("2_usux6")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1358070622]
 layout_mode = 1
@@ -43,16 +41,16 @@ offset_right = 596.0
 offset_bottom = 463.0
 theme_override_font_sizes/font_size = 22
 text = "OBJECTIVE:
-Defend the Blue Force against the invading Red Force.
+Defend against the invading Red Force.
 
 GAMEPLAY:
-Control your tank and defeat enemy tanks.
-Avoid enemy attacks and obstacles.
-Complete levels to progress through the game.
+Control your tank and spot enemy tanks.
+Avoid enemy attacks and defeat the Red tanks.
+Navigate through obstacles. Complete levels to progress through the game.
 
 CONTROLS:
-Movement and shooting controls will be added
-once confirmed by the development team.
+WASD or arrow buttons to move the tank.
+Left mouse button to fire.
 "
 
 [node name="BackButton" type="Button" parent="." unique_id=427211232]
