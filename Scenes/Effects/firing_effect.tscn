@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://st8ekhu31wtc"]
 
 [ext_resource type="Shader" uid="uid://bm2t8tt6fsakv" path="res://Shaders/particle_polygon.gdshader" id="1_wsvwa"]
-[ext_resource type="AudioStream" uid="uid://cj0cuq6weepcx" path="res://Sounds/tank_firing1.mp3" id="2_nik8n"]
+[ext_resource type="AudioStream" uid="uid://ck7w0waulnkjk" path="res://Sounds/tank_firing2.mp3" id="2_wsvwa"]
 
 [sub_resource type="Animation" id="Animation_8uuqg"]
 length = 0.001
@@ -499,4 +499,4 @@ texture = SubResource("GradientTexture2D_8uuqg")
 texture_scale = 2.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=251664268]
-stream = ExtResource("2_nik8n")
+stream = ExtResource("2_wsvwa")
