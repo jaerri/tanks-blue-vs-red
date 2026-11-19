@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://lbjymrheaqx" path="res://Scripts/LevelBehaviour/level.gd" id="1_m6f6w"]
 [ext_resource type="PackedScene" uid="uid://bnibdwh56u3sr" path="res://Scenes/MapObjects/floor.tscn" id="2_302sc"]
+[ext_resource type="AudioStream" uid="uid://cv5mmd7qf0khd" path="res://Sounds/battle_music.wav" id="2_aunfx"]
 [ext_resource type="PackedScene" uid="uid://bskeukcg2onbf" path="res://Scenes/MapObjects/wall.tscn" id="3_aunfx"]
 [ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="4_j32wv"]
 [ext_resource type="PackedScene" uid="uid://d4cndyy8tgt0p" path="res://Scenes/Tanks/red_tank.tscn" id="5_nq5j5"]
@@ -16,6 +17,11 @@ agent_radius = 15.0
 
 [node name="World" type="Node2D" unique_id=148845647]
 script = ExtResource("1_m6f6w")
+
+[node name="BattleMusic" type="AudioStreamPlayer" parent="." unique_id=2140739577]
+stream = ExtResource("2_aunfx")
+volume_db = -22.0
+autoplay = true
 
 [node name="DebugCamera" type="Camera2D" parent="." unique_id=216892053]
 anchor_mode = 0
@@ -121,6 +127,16 @@ polygon = PackedVector2Array(374, 807, 1737, 627, 1997, 1067, 608, 618, 1487, 13
 
 [node name="BlueTank" parent="." unique_id=432529071 instance=ExtResource("4_j32wv")]
 position = Vector2(406, 1258)
+rotation = -2.4528182
+
+[node name="TurretHitbox" parent="BlueTank/Hitbox" parent_id_path=PackedInt32Array(432529071, 871341606) index="0" unique_id=1961801923]
+scale = Vector2(0.10000022, 0.10000022)
+
+[node name="MuzzlePosition" parent="BlueTank/Turret" parent_id_path=PackedInt32Array(432529071, 413233402) index="3" unique_id=421353804]
+use_parent_material = false
+
+[node name="FiringEffect" parent="BlueTank/Turret/MuzzlePosition" index="0" unique_id=461974090]
+use_parent_material = false
 
 [node name="Node2D" parent="BlueTank" index="8" unique_id=999534001]
 position = Vector2(406, 1258)

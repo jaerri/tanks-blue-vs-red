@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bvcjdokm062ij" path="res://Scripts/tank.gd" id="1_ensx4"]
 [ext_resource type="PackedScene" uid="uid://b307wuanbnmoj" path="res://Scenes/turret.tscn" id="3_ensx4"]
+[ext_resource type="AudioStream" uid="uid://oy68qwyd3xyk" path="res://Sounds/tank_engine_running.wav" id="5_2nc7w"]
 [ext_resource type="Resource" uid="uid://ba1yi8ubvel5e" path="res://Data/blue_std_shell.tres" id="5_c7p7v"]
 [ext_resource type="Script" uid="uid://7gl15wn6xyhf" path="res://Scripts/Health+Damage/hitbox.gd" id="5_n7usw"]
 
@@ -41,7 +42,11 @@ unique_name_in_owner = true
 shell_data = ExtResource("5_c7p7v")
 
 [node name="MuzzlePosition" parent="Turret" index="0" unique_id=421353804]
+use_parent_material = true
 position = Vector2(90, 0)
+
+[node name="FiringEffect" parent="Turret/MuzzlePosition" index="0" unique_id=461974090]
+use_parent_material = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="." unique_id=1571754363]
 scale = Vector2(0.25, 0.25)
@@ -70,6 +75,13 @@ theme = SubResource("Theme_42q8f")
 step = 1.0
 value = 100.0
 show_percentage = false
+
+[node name="EngineSound" type="AudioStreamPlayer2D" parent="." unique_id=215274819]
+unique_name_in_owner = true
+stream = ExtResource("5_2nc7w")
+volume_db = -20.0
+autoplay = true
+max_distance = 800.0
 
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_area_entered"]
 [connection signal="die" from="Hitbox" to="." method="_on_hitbox_die"]

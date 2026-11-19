@@ -59,6 +59,9 @@ position = Vector2(46, 0)
 remote_path = NodePath("../../Hitbox/TurretHitbox")
 update_scale = false
 
+[node name="EngineSound" parent="." index="9" unique_id=215274819]
+volume_db = -25.0
+
 [connection signal="destroy" from="." to="Player" method="_on_tank_destroy"]
 
 [editable path="HUD"]

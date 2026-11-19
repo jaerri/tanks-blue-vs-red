@@ -75,6 +75,7 @@ func _on_hitbox_die() -> void:
 	
 	# destruction effects
 	EffectSpawner.spawn_combat_effect(global_position, true)
+	%EngineSound.stop()
 	modulate = Color.DIM_GRAY
 
 	# tell everybd we are dead
