@@ -108,6 +108,9 @@ func _on_engaging_state_entered() -> void:
 var aimed_time := 0.0
 func _on_engaging_state_physics_processing(delta: float) -> void:
 	commander_target = player.global_position
+	var point_to_player = (commander_target - global_position).normalized() * %NavigationAgent2D.target_desired_distance * 2
+	%NavigationAgent2D.target_position = global_position + point_to_player
+	print("update new player pos: ", point_to_player)
 	#### still need to check max range
 	####
 	if turret_target.distance_to(player.global_position) < FIRING_TOLERANCE:

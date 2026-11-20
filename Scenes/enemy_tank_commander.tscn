@@ -53,7 +53,7 @@ metadata/_custom_type_script = "uid://jk2jm1g6q853"
 [node name="Patrol" type="Node" parent="StateChart/Root" unique_id=393362795]
 script = ExtResource("4_skqrr")
 
-[node name="PlayerSpotted" type="Node" parent="StateChart/Root/Patrol" unique_id=372786281]
+[node name="Engage" type="Node" parent="StateChart/Root/Patrol" unique_id=372786281]
 script = ExtResource("5_b3bm4")
 to = NodePath("../../Hunt")
 guard = SubResource("Resource_jir88")
@@ -92,6 +92,7 @@ delay_in_seconds = "0.0"
 unique_name_in_owner = true
 target_desired_distance = 20.0
 path_max_distance = 20.0
+simplify_path = true
 
 [node name="SpottingTimer" type="Timer" parent="." unique_id=468208571]
 process_callback = 0
