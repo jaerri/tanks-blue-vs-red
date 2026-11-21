@@ -130,7 +130,7 @@ position = Vector2(406, 1258)
 rotation = -2.4528182
 
 [node name="TurretHitbox" parent="BlueTank/Hitbox" parent_id_path=PackedInt32Array(432529071, 871341606) index="0" unique_id=1961801923]
-scale = Vector2(0.10000022, 0.10000022)
+scale = Vector2(0.100000225, 0.100000225)
 
 [node name="MuzzlePosition" parent="BlueTank/Turret" parent_id_path=PackedInt32Array(432529071, 413233402) index="3" unique_id=421353804]
 use_parent_material = false

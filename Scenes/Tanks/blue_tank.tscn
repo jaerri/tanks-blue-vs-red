@@ -18,6 +18,7 @@ ammo_counter = NodePath("../../Turret/AmmoCount")
 reload_timer = NodePath("../../Turret/ReloadTimer")
 
 [node name="Player" parent="." index="1" unique_id=1686535269 instance=ExtResource("2_0welw")]
+rotation = 1.5707964
 
 [node name="TankBlueHull" type="Sprite2D" parent="." index="2" unique_id=63939819]
 scale = Vector2(0.1, 0.1)
@@ -28,6 +29,7 @@ scale = Vector2(0.1, 0.1)
 polygon = PackedVector2Array(119.5, -220.5, -119.5, -220.5, -123.5, -217.1, -123.5, 182.5, -89.5, 220.20001, 90.100006, 220.5, 123.399994, 181.5, 123.5, -217.1)
 
 [node name="TurretHitbox" type="CollisionPolygon2D" parent="Hitbox" parent_id_path=PackedInt32Array(871341606) index="0" unique_id=1961801923]
+rotation = 1.5707964
 scale = Vector2(0.1, 0.1)
 polygon = PackedVector2Array(162, -48.4, 128, -99.5, 128, -102.5, -83.7, -102.5, -85, -101.5, -159.1, -101.5, -172, -90.6, -172, 91.100006, -161, 98.899994, -161, 101.399994, -131.5, 102.5, 128.70001, 102.5, 159, 53.399994, 159, 52.399994, 165.5, 49.5, 168.1, 49.5, 169.5, 45.5, 163, 40.100006, 163, 38.600006, 169.29999, 36.5, 172, 36.5, 172, -36.699997, 163.5, -39.5, 162.70001, -39.5, 162, -45.8)
 
@@ -55,8 +57,12 @@ texture = ExtResource("4_4u8t6")
 [node name="MuzzlePosition" parent="Turret" index="3" unique_id=421353804]
 position = Vector2(46, 0)
 
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Turret" index="4" unique_id=566501578]
+[node name="UpdateHitbox" type="RemoteTransform2D" parent="Turret" index="4" unique_id=566501578]
 remote_path = NodePath("../../Hitbox/TurretHitbox")
+update_scale = false
+
+[node name="UpdatePlayer" type="RemoteTransform2D" parent="Turret" index="5" unique_id=1044800214]
+remote_path = NodePath("../../Player")
 update_scale = false
 
 [node name="EngineSound" parent="." index="9" unique_id=215274819]

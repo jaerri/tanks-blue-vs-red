@@ -7,6 +7,7 @@ extends Commander
 @export var TURN_SPEED_CURVE: Curve # x (degrees) -> y (recommended speed)
 @export var FIRING_TOLERANCE: float = 45.0
 @export var REACTION_TIME: float = 0.4
+@export var LOITER_RADIUS: float = 150.0
 
 static func aggressive_drive(tank: Tank, current: float, target: float, distance: float) -> float:
 	var best_distance_to_target := (
@@ -75,6 +76,7 @@ func drive() -> Vector2:
 
 @onready var player: Tank = get_tree().get_first_node_in_group("player")
 var last_player_pos: Vector2
+var last_player_velocity: Vector2
 func _spotting_update() -> void:
 	# do raycast
 	%SpottingRaycast.target_position = to_local(player.global_position)
@@ -85,6 +87,7 @@ func _spotting_update() -> void:
 	%StateChart.set_expression_property("is_player_spotted", spotted)
 	if spotted:
 		last_player_pos = player.global_position
+		last_player_velocity = player.get_real_velocity()
 	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and DEBUG: 
@@ -95,6 +98,7 @@ func _draw() -> void:
 	if DEBUG:
 		draw_line(Vector2(), Vector2(speed, -steer).rotated(rotation - PI/2) * 50, Color.YELLOW, 1.0)
 		draw_line(to_local(next), to_local(after_next), Color.BLUE, 2.0)
+		#draw_circle(Vector2(), LOITER_RADIUS, Color.RED, false)
 
 func _physics_process(_delta: float) -> void:
 	if not vehicle:
@@ -110,7 +114,7 @@ func _on_engaging_state_physics_processing(delta: float) -> void:
 	commander_target = player.global_position
 	var point_to_player = (commander_target - global_position).normalized() * %NavigationAgent2D.target_desired_distance * 2
 	%NavigationAgent2D.target_position = global_position + point_to_player
-	print("update new player pos: ", point_to_player)
+	#print("update new player pos: ", point_to_player)
 	#### still need to check max range
 	####
 	if turret_target.distance_to(player.global_position) < FIRING_TOLERANCE:
@@ -119,15 +123,13 @@ func _on_engaging_state_physics_processing(delta: float) -> void:
 		else:
 			aimed_time += delta * randf() 
 
-func _on_seek_state_entered() -> void:
-	%NavigationAgent2D.target_position = last_player_pos
-	
 var patrol_path: PackedVector2Array
 var patrol_idx: int
 func _on_patrol_state_entered() -> void:
 	var paths := get_tree().get_nodes_in_group("enemy_patrol_paths")
 	patrol_path = (paths[randi_range(0, paths.size()-1)] as Polygon2D).polygon
 	patrol_idx = randi_range(0, patrol_path.size()-1) 
+	turret_target = global_position + Vector2.from_angle(global_rotation) * 50
 
 func _on_patrol_state_physics_processing(_delta: float) -> void:
 	if %NavigationAgent2D.is_navigation_finished():
@@ -136,7 +138,20 @@ func _on_patrol_state_physics_processing(_delta: float) -> void:
 			_on_patrol_state_entered()	
 		else:
 			patrol_idx += 1
+
+var search_pos: Vector2
+func _on_seek_state_entered() -> void:
+	search_pos = last_player_pos + last_player_velocity.normalized() * 100.0
+	%NavigationAgent2D.target_position = search_pos
+	
+func _on_search(event: StringName) -> void:
+	if event == "navigation_finished":
+		%NavigationAgent2D.target_position = pick_random_loiter(search_pos)
 		
+func pick_random_loiter(centre: Vector2) -> Vector2:
+	var pos = centre + Vector2.from_angle(randf() * TAU) * randf_range(0.0, LOITER_RADIUS)
+	return NavigationServer2D.map_get_closest_point(get_world_2d().navigation_map, pos) 
+
 func _on_navigation_agent_2d_navigation_finished() -> void:
 	%StateChart.send_event("navigation_finished")
 	
