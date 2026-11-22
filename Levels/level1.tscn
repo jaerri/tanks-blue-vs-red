@@ -20,7 +20,7 @@ script = ExtResource("1_m6f6w")
 
 [node name="BattleMusic" type="AudioStreamPlayer" parent="." unique_id=2140739577]
 stream = ExtResource("2_aunfx")
-volume_db = -22.0
+volume_db = -25.0
 autoplay = true
 
 [node name="DebugCamera" type="Camera2D" parent="." unique_id=216892053]
@@ -140,6 +140,9 @@ use_parent_material = false
 
 [node name="Node2D" parent="BlueTank" index="8" unique_id=999534001]
 position = Vector2(406, 1258)
+
+[node name="EngineSound" parent="BlueTank" index="9" unique_id=215274819]
+attenuation = 1.0
 
 [node name="RedTank" parent="." unique_id=391761971 instance=ExtResource("5_nq5j5")]
 position = Vector2(2066, 158)

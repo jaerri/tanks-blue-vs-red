@@ -64,6 +64,7 @@ func _physics_process(delta: float) -> void:
 	if commander:
 		_accelerate(delta, commander.tank_input * Vector2(1, -1))
 		_apply_tank_movement(delta)
+		%EngineSound.pitch_scale = clampf(absf(speed) + 0.4 * absf(steer), 0.4, 1.8)
 
 var destroyed: bool = false;
 func _on_hitbox_die() -> void:

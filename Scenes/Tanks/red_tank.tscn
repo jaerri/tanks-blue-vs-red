@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://cj0cuq6weepcx" path="res://Sounds/tank_firing1.mp3" id="7_il2bd"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_7dqip"]
+light_mode = 2
 
 [node name="RedTank" unique_id=432529071 node_paths=PackedStringArray("commander") groups=["enemy"] instance=ExtResource("1_hn3e0")]
 material = SubResource("CanvasItemMaterial_7dqip")

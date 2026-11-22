@@ -80,9 +80,10 @@ show_percentage = false
 [node name="EngineSound" type="AudioStreamPlayer2D" parent="." unique_id=215274819]
 unique_name_in_owner = true
 stream = ExtResource("5_2nc7w")
-volume_db = -20.0
+volume_db = -15.0
 autoplay = true
-max_distance = 800.0
+max_distance = 1000.0
+attenuation = 3.0
 
 [connection signal="area_entered" from="Hitbox" to="Hitbox" method="_on_area_entered"]
 [connection signal="die" from="Hitbox" to="." method="_on_hitbox_die"]
