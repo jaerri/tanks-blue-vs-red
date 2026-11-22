@@ -5,6 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://87jf173rjfjq" path="res://UI/Components/instructions_menu.tscn" id="3_4cwpn"]
 [ext_resource type="PackedScene" uid="uid://c8rgapg6ht8an" path="res://Levels/level1.tscn" id="3_f40uw"]
 
+[sub_resource type="SystemFont" id="SystemFont_8ctay"]
+font_names = PackedStringArray("Monospace")
+font_weight = 300
+
+[sub_resource type="FontVariation" id="FontVariation_4cwpn"]
+base_font = SubResource("SystemFont_8ctay")
+
 [node name="MainMenu" type="Control" unique_id=897752408]
 layout_mode = 3
 anchors_preset = 15
@@ -28,7 +35,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -4.0
 offset_top = -1.0
-offset_right = -4.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -104,3 +110,17 @@ text = "QUIT
 
 
 "
+
+[node name="VersionLabel" type="Label" parent="." unique_id=577590518]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -25.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = SubResource("FontVariation_4cwpn")
+text = "version"

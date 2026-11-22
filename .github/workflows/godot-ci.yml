@@ -20,6 +20,15 @@ jobs:
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates/ .exports/
           mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable
+      - name: Write git version to .VERSION
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          if TAG=$(git describe --tags --exact-match HEAD 2>/dev/null); then
+            VERSION="$TAG"
+          else
+            VERSION="$(git rev-parse --short HEAD)@$(git show -s --format=%cI HEAD)"
+          fi
+          printf '%s' "$VERSION" > .VERSION
       - name: Web Build
         run: |
           godot -v --headless --export-debug "Web"
