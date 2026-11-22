@@ -24,3 +24,5 @@ func _on_instructions_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+	JavaScriptBridge.eval("window.close()")
+	
