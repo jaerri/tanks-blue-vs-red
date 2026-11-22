@@ -13,7 +13,7 @@ func _ready() -> void:
 	ammo_counter.ammo_change.connect(_on_ammo_change)
 	_on_ammo_change()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var progress := reload_timer.time_left / reload_timer.wait_time
 	if ammo_counter.remaining <= 0:
 		reload_bar.value = 1.0

@@ -5,6 +5,7 @@ extends Node2D
 signal fire()
 
 var vehicle: PhysicsBody2D
+var turret: Turret
 var tank_input := Vector2()
 ## tell turret where to aim
 var commander_target := Vector2()
