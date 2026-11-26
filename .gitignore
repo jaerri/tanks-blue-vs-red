@@ -1,6 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 .editorconfig
+CLAUDE.md
 /android/
 addons/godot-neovim
 temp/

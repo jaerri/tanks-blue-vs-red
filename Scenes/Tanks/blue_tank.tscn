@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://ca82xql7ofh2f" path="res://Scripts/ammo_counter.gd" id="6_x6rne"]
 
 [node name="BlueTank" unique_id=432529071 node_paths=PackedStringArray("commander") groups=["player"] instance=ExtResource("1_q2wdb")]
+ENGINE_POWER = 80.0
 commander = NodePath("Player")
 
 [node name="HUD" parent="." index="0" unique_id=67240621 instance=ExtResource("2_evf4h")]
