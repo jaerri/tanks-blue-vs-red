@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bo0w5h8rx7rne"]
+
+[ext_resource type="Script" uid="uid://d3dy4qx822q4p" path="res://ammo_indicator.gd" id="1_15x5y"]
+
+[node name="AmmoIndicator" type="Control" unique_id=1362901327]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_15x5y")
+max_ammo = 20
+
+[node name="AmmoLabel" type="Label" parent="." unique_id=1268258602]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "AMMO: 10 / 10"
