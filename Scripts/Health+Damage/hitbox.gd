@@ -9,7 +9,7 @@ signal health_changed(old: float, new: float)
 
 func change_damage(amount: float) -> void:
 	var old = health
-	health += amount
+	health = clampf(health + amount, 0.0, MAX_HEALTH)
 	health_changed.emit(old, health)
 	if health <= 0.0:
 		die.emit()

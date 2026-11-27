@@ -1,10 +1,11 @@
-[gd_scene format=3 uid="uid://c8rgapg6ht8an"]
+[gd_scene format=3 uid="uid://bqvkejceiialc"]
 
 [ext_resource type="PackedScene" uid="uid://b51v8hr8y7gtg" path="res://Levels/level.tscn" id="1_m6f6w"]
 [ext_resource type="PackedScene" uid="uid://bnibdwh56u3sr" path="res://Scenes/MapObjects/floor.tscn" id="2_302sc"]
 [ext_resource type="PackedScene" uid="uid://bskeukcg2onbf" path="res://Scenes/MapObjects/wall.tscn" id="3_aunfx"]
 [ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="4_j32wv"]
 [ext_resource type="PackedScene" uid="uid://d4cndyy8tgt0p" path="res://Scenes/Tanks/red_tank.tscn" id="5_nq5j5"]
+[ext_resource type="PackedScene" path="res://Scenes/MapObjects/supply_spot.tscn" id="99_supply"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_302sc"]
 vertices = PackedVector2Array(2415, 1615, 2463.6094, 1641.1406, -27.992188, 1664.8516, -15, 1615, -27, -32.960938, -15, -15, 2421.3594, -27.03125, 2415, -15, 1825, 335, 2015, 545, 1745, 545, 1395, 535, 1395, 265, 2025, 1235, 2215, 1235, 1795, 1355, 2345, 55, 2345, 1545, 2215, 965, 2175, 335, 2175, 265, 2025, 965, 2015, 735, 55, 55, 1825, 265, 1795, 1125, 1635, 1035, 1635, 725, 1745, 735, 1565, 1125, 1565, 1035, 1335, 1545, 1565, 1355, 1335, 1265, 1265, 1265, 1015, 1175, 1015, 985, 1565, 725, 1255, 795, 1255, 725, 515, 935, 905, 795, 855, 535, 905, 725, 515, 585, 585, 535, 1165, 265, 745, 985, 1165, 535, 855, 345, 585, 345, 745, 1175, 615, 1225, 545, 1225, 415, 1175, 415, 1105, 445, 935, 1265, 1545, 615, 1545, 545, 1545, 55, 1545, 145, 1175, 145, 1105, 445, 585)
@@ -13,6 +14,18 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-42, -48, -43, 1680, 24
 parsed_geometry_type = 1
 source_geometry_mode = 2
 agent_radius = 15.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_302sc"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_aunfx"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j32wv"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nq5j5"]
+light_mode = 1
 
 [node name="Level1" unique_id=1156998567 instance=ExtResource("1_m6f6w")]
 
@@ -119,18 +132,19 @@ position = Vector2(772.9999, 712.00006)
 rotation = -2.4528182
 
 [node name="TurretHitbox" parent="BlueTank/Hitbox" parent_id_path=PackedInt32Array(432529071, 871341606) index="0" unique_id=1961801923]
+rotation = 1.5707964
 scale = Vector2(0.100000225, 0.100000225)
 
-[node name="MuzzlePosition" parent="BlueTank/Turret" parent_id_path=PackedInt32Array(432529071, 413233402) index="3" unique_id=421353804]
+[node name="MuzzlePosition" parent="BlueTank/Turret" parent_id_path=PackedInt32Array(432529071, 413233402) index="2" unique_id=421353804]
 use_parent_material = false
 
 [node name="FiringEffect" parent="BlueTank/Turret/MuzzlePosition" index="0" unique_id=461974090]
 use_parent_material = false
 
-[node name="Node2D" parent="BlueTank" index="8" unique_id=999534001]
+[node name="Node2D" parent="BlueTank" index="7" unique_id=999534001]
 position = Vector2(772.9999, 712.00006)
 
-[node name="EngineSound" parent="BlueTank" index="9" unique_id=215274819]
+[node name="EngineSound" parent="BlueTank" index="8" unique_id=215274819]
 attenuation = 1.0
 
 [node name="RedTank" parent="." index="7" unique_id=1478072948 instance=ExtResource("5_nq5j5")]
@@ -142,6 +156,27 @@ position = Vector2(718, 654)
 [node name="RedTank3" parent="." index="9" unique_id=1365790166 instance=ExtResource("5_nq5j5")]
 position = Vector2(1432, 1209)
 
+[node name="SupplySpot1" parent="." index="10" unique_id=759539922 instance=ExtResource("99_supply")]
+z_index = 2
+material = SubResource("CanvasItemMaterial_302sc")
+position = Vector2(300, 1250)
+
+[node name="SupplySpot2" parent="." index="11" unique_id=1103617714 instance=ExtResource("99_supply")]
+z_index = 2
+material = SubResource("CanvasItemMaterial_aunfx")
+position = Vector2(300, 1400)
+supply_type = 1
+
+[node name="SupplySpot3" parent="." index="12" unique_id=460917680 instance=ExtResource("99_supply")]
+z_index = 2
+material = SubResource("CanvasItemMaterial_j32wv")
+position = Vector2(1550, 850)
+
+[node name="SupplySpot4" parent="." index="13" unique_id=1247370605 instance=ExtResource("99_supply")]
+z_index = 2
+material = SubResource("CanvasItemMaterial_nq5j5")
+position = Vector2(2200, 1450)
+supply_type = 1
+
 [editable path="BlueTank"]
-[editable path="BlueTank/HUD"]
 [editable path="BlueTank/Turret"]

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bnibdwh56u3sr" path="res://Scenes/MapObjects/floor.tscn" id="1_ty1rc"]
 [ext_resource type="PackedScene" uid="uid://bskeukcg2onbf" path="res://Scenes/MapObjects/wall.tscn" id="2_m135w"]
 [ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="3_m135w"]
+[ext_resource type="PackedScene" path="res://Scenes/MapObjects/supply_spot.tscn" id="99_supply"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_dj5hn"]
 vertices = PackedVector2Array(1675, 415, 2115, 585, 1885, 585, 1275, 565, 535, 515, 1605, 415, 1775, 925, 1505, 925, 795, 875, 1205, 795, 1275, 795, 2345, 1545, 55, 1545, 915, 1455, 1535, 1395, 845, 1455, 1345, 1395, 1945, 965, 1885, 655, 2115, 655, 2175, 965, 1095, 415, 905, 415, 2345, 55, 1945, 1195, 2175, 1195, 1535, 1325, 1505, 995, 1775, 995, 1345, 1325, 1275, 1135, 1275, 1065, 535, 325, 905, 185, 1205, 565, 915, 1265, 1045, 1135, 1045, 1065, 845, 1265, 655, 1135, 655, 1065, 725, 875, 1605, 185, 1095, 185, 1675, 185, 55, 55, 305, 325, 305, 515, 795, 645, 465, 1135, 465, 1065, 725, 645)
@@ -16,6 +17,18 @@ agent_radius = 15.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ojro4"]
 radius = 250.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dj5hn"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ojro4"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xv7eh"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ijnin"]
+light_mode = 1
 
 [node name="Level2" unique_id=1156998567 instance=ExtResource("1_p0prn")]
 script = ExtResource("1_pcft3")
@@ -129,3 +142,25 @@ shape = SubResource("CircleShape2D_ojro4")
 
 [node name="BlueTank" parent="." index="9" unique_id=432529071 instance=ExtResource("3_m135w")]
 position = Vector2(1761, 367)
+
+[node name="SupplySpot1" parent="." index="10" unique_id=1353200718 instance=ExtResource("99_supply")]
+z_index = 2
+material = SubResource("CanvasItemMaterial_dj5hn")
+position = Vector2(160, 1180)
+
+[node name="SupplySpot2" parent="." index="11" unique_id=1927169194 instance=ExtResource("99_supply")]
+z_index = 2
+material = SubResource("CanvasItemMaterial_ojro4")
+position = Vector2(300, 1400)
+supply_type = 1
+
+[node name="SupplySpot3" parent="." index="12" unique_id=713773605 instance=ExtResource("99_supply")]
+z_index = 2
+material = SubResource("CanvasItemMaterial_xv7eh")
+position = Vector2(1820, 1400)
+
+[node name="SupplySpot4" parent="." index="13" unique_id=526173824 instance=ExtResource("99_supply")]
+z_index = 2
+material = SubResource("CanvasItemMaterial_ijnin")
+position = Vector2(2200, 800)
+supply_type = 1
