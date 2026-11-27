@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://s3lx15vl2kuf"]
 
 [ext_resource type="Script" uid="uid://ryfmogi7b8hl" path="res://UI/main_menu.gd" id="1_p8ccj"]
+[ext_resource type="PackedScene" uid="uid://dwd2pps8tckkd" path="res://Levels/level2.tscn" id="2_4cwpn"]
 [ext_resource type="AudioStream" uid="uid://cbv8ymmydmhg7" path="res://Sounds/menu_music.wav" id="2_tk8dj"]
 [ext_resource type="PackedScene" uid="uid://87jf173rjfjq" path="res://UI/Components/instructions_menu.tscn" id="3_4cwpn"]
-[ext_resource type="PackedScene" uid="uid://c8rgapg6ht8an" path="res://Levels/level1.tscn" id="3_f40uw"]
 
 [sub_resource type="SystemFont" id="SystemFont_8ctay"]
 font_names = PackedStringArray("Monospace")
@@ -20,7 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_p8ccj")
-level = ExtResource("3_f40uw")
+level = ExtResource("2_4cwpn")
 instructions_menu = ExtResource("3_4cwpn")
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=292125299]

@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://dwd2pps8tckkd"]
 
+[ext_resource type="Script" uid="uid://ckb4gsdxsr6ry" path="res://Scripts/LevelBehaviour/level2.gd" id="1_pcft3"]
 [ext_resource type="PackedScene" uid="uid://bnibdwh56u3sr" path="res://Scenes/MapObjects/floor.tscn" id="1_ty1rc"]
+[ext_resource type="PackedScene" uid="uid://kaq8oad6dkr0" path="res://Levels/level3.tscn" id="2_dj5hn"]
 [ext_resource type="PackedScene" uid="uid://bskeukcg2onbf" path="res://Scenes/MapObjects/wall.tscn" id="2_m135w"]
+[ext_resource type="PackedScene" uid="uid://bs5yynyeuj8dv" path="res://UI/Components/end_screen.tscn" id="2_p0prn"]
 [ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="3_m135w"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_m135w"]
@@ -12,7 +15,15 @@ parsed_geometry_type = 1
 source_geometry_mode = 2
 agent_radius = 15.0
 
-[node name="Level2" type="Node2D" unique_id=592257539]
+[sub_resource type="CircleShape2D" id="CircleShape2D_pcft3"]
+radius = 250.0
+
+[node name="Level2" type="Node2D" unique_id=592257539 node_paths=PackedStringArray("zone")]
+script = ExtResource("1_pcft3")
+zone = NodePath("VictoryZone")
+zone_color = Color(0.38940117, 0.5364657, 0.6876897, 1)
+next_level = ExtResource("2_dj5hn")
+end_screen_scene = ExtResource("2_p0prn")
 
 [node name="DebugCamera" type="Camera2D" parent="." unique_id=146288852]
 anchor_mode = 0
@@ -22,16 +33,9 @@ zoom = Vector2(0.4, 0.4)
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=157911830]
 color = Color(0.46618086, 0.4661808, 0.4661808, 1)
 
-[node name="EnemyNavigation" type="Node" parent="." unique_id=1363000084]
-
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="EnemyNavigation" unique_id=1945308078 groups=["navigation_polygon_source_geometry_group"]]
-navigation_polygon = SubResource("NavigationPolygon_m135w")
-
-[node name="PatrolPath1" type="Polygon2D" parent="EnemyNavigation" unique_id=1044538715 groups=["enemy_patrol_paths"]]
-color = Color(1, 1, 1, 0)
-polygon = PackedVector2Array(1593, 337, 871, 953, 615, 665, 2027, 444, 2215, 1437, 1446, 1180, 1076, 637, 344, 645, 933, 1279, 1721, 849, 151, 280)
-
 [node name="Map" type="Node2D" parent="." unique_id=2079773114]
+z_index = -1
+z_as_relative = false
 
 [node name="Floor" parent="Map" unique_id=415627875 instance=ExtResource("1_ty1rc")]
 position = Vector2(-464.99994, 1245)
@@ -104,5 +108,25 @@ modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(2060, 1080)
 scale = Vector2(6.25, 6.25)
 
+[node name="EnemyNavigation" type="Node" parent="." unique_id=1363000084]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="EnemyNavigation" unique_id=1945308078 groups=["navigation_polygon_source_geometry_group"]]
+navigation_polygon = SubResource("NavigationPolygon_m135w")
+
+[node name="PatrolPath1" type="Polygon2D" parent="EnemyNavigation" unique_id=1044538715 groups=["enemy_patrol_paths"]]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1593, 337, 871, 953, 615, 665, 2027, 444, 2215, 1437, 1446, 1180, 1076, 637, 344, 645, 933, 1279, 1721, 849, 151, 280)
+
+[node name="VictoryZone" type="Area2D" parent="." unique_id=1643270237]
+unique_name_in_owner = true
+visible = false
+position = Vector2(2074, 295)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VictoryZone" unique_id=1011221962]
+shape = SubResource("CircleShape2D_pcft3")
+
 [node name="BlueTank" parent="." unique_id=432529071 instance=ExtResource("3_m135w")]
-position = Vector2(195, 1309)
+position = Vector2(1761, 367)
