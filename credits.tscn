@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cdm4j6pmg73xw"]
+
+[ext_resource type="Script" uid="uid://dyjwmeaqmt033" path="res://credits.gd" id="1_nm7lk"]
+
+[node name="Credits" type="Control" unique_id=1100720991]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nm7lk")
+
+[node name="TitleLabel" type="Label" parent="." unique_id=456367276]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "CREDITS
+"
+
+[node name="GameNameLabel" type="Label" parent="." unique_id=186439752]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 256.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 26
+text = "TANKS! BLUE VS RED
+"
+
+[node name="TeamNameLabel" type="Label" parent="." unique_id=673976652]
+layout_mode = 0
+offset_top = 100.0
+offset_right = 313.0
+offset_bottom = 165.0
+theme_override_font_sizes/font_size = 22
+text = "Developed by Cadelak Gamez
+"
+
+[node name="TeamMembersLabel" type="Label" parent="." unique_id=781239232]
+layout_mode = 0
+offset_top = 150.0
+offset_right = 346.0
+offset_bottom = 333.0
+theme_override_font_sizes/font_size = 20
+text = "DEVELOPMENT TEAM
+
+Adebayo Onajoko – Project Lead
+Minh Khoa Le – Lead Programmer
+Caroline Aneya – Business Analyst
+Mojolaoluwa Adebayo – Media Lead"
+
+[node name="ResourcesLabel" type="Label" parent="." unique_id=820052538]
+layout_mode = 0
+offset_top = 365.0
+offset_right = 368.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 20
+text = "RESOURCES USED
+
+Game Engine: Godot Engine
+Programming Language: GDScript
+Version Control: GitHub
+Graphics and Sprites: To be confirmed
+Background Music: To be confirmed
+Sound Effects: To be confirmed"
+
+[node name="BackButton" type="Button" parent="." unique_id=2032514513]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 500.0
+offset_right = 600.0
+offset_bottom = 565.0
+theme_override_font_sizes/font_size = 22
+text = "BACK
+"
