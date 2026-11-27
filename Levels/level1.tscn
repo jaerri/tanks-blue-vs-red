@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="4_j32wv"]
 [ext_resource type="PackedScene" uid="uid://d4cndyy8tgt0p" path="res://Scenes/Tanks/red_tank.tscn" id="5_nq5j5"]
 
+[ext_resource type="PackedScene" path="res://Scenes/MapObjects/supply_spot.tscn" id="99_supply"]
+
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_hc4ar"]
 vertices = PackedVector2Array(2415, 1615, 2463.6094, 1641.1406, -27.992188, 1664.8516, -15, 1615, -27, -32.960938, -15, -15, 2421.3594, -27.03125, 2415, -15, 1825, 335, 2015, 545, 1745, 545, 1395, 535, 1395, 265, 2025, 1235, 2215, 1235, 1795, 1355, 2345, 55, 2345, 1545, 2215, 965, 2175, 335, 2175, 265, 2025, 965, 2015, 735, 55, 55, 1825, 265, 1795, 1125, 1635, 1035, 1635, 725, 1745, 735, 1565, 1125, 1565, 1035, 1335, 1545, 1565, 1355, 1335, 1265, 1265, 1265, 1015, 1175, 1015, 985, 1565, 725, 1255, 795, 1255, 725, 515, 935, 905, 795, 855, 535, 905, 725, 515, 585, 585, 535, 1165, 265, 745, 985, 1165, 535, 855, 345, 585, 345, 745, 1175, 615, 1225, 545, 1225, 415, 1175, 415, 1105, 445, 935, 1265, 1545, 615, 1545, 545, 1545, 55, 1545, 145, 1175, 145, 1105, 445, 585)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(3, 2, 4, 5), PackedInt32Array(5, 4, 6, 7), PackedInt32Array(7, 6, 1, 0), PackedInt32Array(8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15), PackedInt32Array(16, 17, 14, 18), PackedInt32Array(16, 18, 19, 20), PackedInt32Array(19, 18, 21, 22, 9), PackedInt32Array(23, 16, 20, 24), PackedInt32Array(8, 19, 9), PackedInt32Array(13, 15, 25, 21), PackedInt32Array(21, 25, 26, 27, 28), PackedInt32Array(26, 25, 29, 30), PackedInt32Array(14, 17, 31, 15), PackedInt32Array(32, 15, 31), PackedInt32Array(32, 31, 33, 29), PackedInt32Array(29, 33, 34, 35, 36, 30), PackedInt32Array(37, 30, 38, 39, 11), PackedInt32Array(38, 30, 36, 40, 41), PackedInt32Array(42, 43, 41, 40, 44, 45), PackedInt32Array(24, 8, 12), PackedInt32Array(23, 24, 12), PackedInt32Array(23, 12, 46), PackedInt32Array(40, 36, 47), PackedInt32Array(46, 48, 43, 42, 49), PackedInt32Array(23, 46, 49, 50), PackedInt32Array(40, 47, 51, 52, 53, 54, 55, 56), PackedInt32Array(51, 35, 34, 57, 58, 52), PackedInt32Array(54, 53, 59, 60, 61), PackedInt32Array(61, 60, 23, 62), PackedInt32Array(11, 10, 28, 27), PackedInt32Array(28, 22, 21), PackedInt32Array(11, 27, 37), PackedInt32Array(48, 11, 39, 43), PackedInt32Array(56, 55, 62, 23, 63), PackedInt32Array(63, 23, 50, 45, 44)])
@@ -152,6 +154,22 @@ position = Vector2(718, 654)
 
 [node name="RedTank3" parent="." unique_id=198334206 instance=ExtResource("5_nq5j5")]
 position = Vector2(1432, 1209)
+
+[node name="SupplySpot1" parent="." instance=ExtResource("99_supply")]
+position = Vector2(300, 1250)
+supply_type = 0
+
+[node name="SupplySpot2" parent="." instance=ExtResource("99_supply")]
+position = Vector2(300, 1400)
+supply_type = 1
+
+[node name="SupplySpot3" parent="." instance=ExtResource("99_supply")]
+position = Vector2(1550, 850)
+supply_type = 0
+
+[node name="SupplySpot4" parent="." instance=ExtResource("99_supply")]
+position = Vector2(2200, 1450)
+supply_type = 1
 
 [editable path="BlueTank"]
 [editable path="BlueTank/HUD"]
