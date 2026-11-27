@@ -11,6 +11,7 @@ extends RigidBody2D
 			commander.fire.connect(fire)
 var turret_target := Vector2()
 var reload_timer: Timer
+var maintenance_locked := false
 
 const TURRET_DEADZONE := deg_to_rad(1)
 const PITCH_DEADZONE := 1.0 
@@ -43,6 +44,8 @@ func turn_to(delta: float, pos: Vector2) -> void:
 		apply_torque(torque)
 
 func fire() -> void:
+	if maintenance_locked or commander == null:
+		return
 	# reload
 	if not reload_timer.is_stopped():
 		return
@@ -89,7 +92,7 @@ func _ready() -> void:
 	fly_distance = shell_data.MAX_RANGE / 2
 
 func _physics_process(delta: float) -> void:
-	if commander:
+	if commander and not maintenance_locked:
 		turn_to(delta, commander.commander_target)
 		change_pitch(delta, commander.commander_target)
 	

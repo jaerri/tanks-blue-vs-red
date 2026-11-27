@@ -16,6 +16,10 @@ func _process(_delta: float) -> void:
 	$Aimpoint.position = turret_target
 
 func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode == KEY_E:
+		if is_instance_valid(vehicle) and vehicle.has_method("toggle_maintenance"):
+			vehicle.toggle_maintenance()
+		return
 	if event.is_action_pressed("fire"):
 		fire.emit()
 
