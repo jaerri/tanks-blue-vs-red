@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://bs5yynyeuj8dv"]
 
 [ext_resource type="Script" uid="uid://dfkg0ol4uenh6" path="res://UI/Components/end_screen.gd" id="1_f6iv1"]
-[ext_resource type="PackedScene" uid="uid://s3lx15vl2kuf" path="res://UI/main_menu.tscn" id="2_4c1h5"]
-[ext_resource type="PackedScene" uid="uid://c8rgapg6ht8an" path="res://Levels/level1.tscn" id="3_gn77q"]
 
 [node name="EndScreen" type="Control" unique_id=463435239]
 layout_mode = 3
@@ -12,8 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f6iv1")
-main_menu = ExtResource("2_4c1h5")
-last_level = ExtResource("3_gn77q")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1160815679]
 layout_mode = 1
@@ -25,6 +21,7 @@ grow_vertical = 2
 color = Color(0.09019608, 0.16862746, 0.3019608, 1)
 
 [node name="ResultLabel" type="Label" parent="." unique_id=166742572]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -38,36 +35,44 @@ text = "GAME OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlayAgainButton" type="Button" parent="." unique_id=308067497]
-custom_minimum_size = Vector2(220, 60)
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1772682161]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -105.0
-offset_top = 189.0
-offset_right = 115.0
-offset_bottom = 249.0
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -62.0
+offset_right = 110.0
+offset_bottom = 62.0
 grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="NextLevelButton" type="Button" parent="VBoxContainer" unique_id=1937736516]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "NEXT LEVEL"
+
+[node name="PlayAgainButton" type="Button" parent="VBoxContainer" unique_id=308067497]
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "PLAY AGAIN
 "
 
-[node name="MainMenuButton" type="Button" parent="." unique_id=1601069357]
+[node name="MainMenuButton" type="Button" parent="VBoxContainer" unique_id=1601069357]
 custom_minimum_size = Vector2(220, 60)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -106.0
-offset_top = 288.0
-offset_right = 114.0
-offset_bottom = 348.0
-grow_horizontal = 2
+layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "MAIN MENU
 
 "
 
-[connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]
-[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/NextLevelButton" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MainMenuButton" to="." method="_on_main_menu_pressed"]

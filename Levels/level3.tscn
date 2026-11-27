@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://kaq8oad6dkr0"]
 
 [ext_resource type="PackedScene" uid="uid://bnibdwh56u3sr" path="res://Scenes/MapObjects/floor.tscn" id="1_c5oim"]
+[ext_resource type="Script" uid="uid://di4o7a000081d" path="res://Scripts/LevelBehaviour/level3.gd" id="1_eh6o7"]
 [ext_resource type="PackedScene" uid="uid://bskeukcg2onbf" path="res://Scenes/MapObjects/wall.tscn" id="2_eh6o7"]
 [ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="3_vr4rd"]
 
 [node name="Level3" type="Node2D" unique_id=592257539]
+script = ExtResource("1_eh6o7")
 
 [node name="Floor" parent="." unique_id=415627875 instance=ExtResource("1_c5oim")]
 position = Vector2(-102, 2219)

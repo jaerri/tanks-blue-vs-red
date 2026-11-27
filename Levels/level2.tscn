@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://dwd2pps8tckkd"]
 
+[ext_resource type="PackedScene" uid="uid://b51v8hr8y7gtg" path="res://Levels/level.tscn" id="1_p0prn"]
 [ext_resource type="Script" uid="uid://ckb4gsdxsr6ry" path="res://Scripts/LevelBehaviour/level2.gd" id="1_pcft3"]
 [ext_resource type="PackedScene" uid="uid://bnibdwh56u3sr" path="res://Scenes/MapObjects/floor.tscn" id="1_ty1rc"]
-[ext_resource type="PackedScene" uid="uid://kaq8oad6dkr0" path="res://Levels/level3.tscn" id="2_dj5hn"]
 [ext_resource type="PackedScene" uid="uid://bskeukcg2onbf" path="res://Scenes/MapObjects/wall.tscn" id="2_m135w"]
-[ext_resource type="PackedScene" uid="uid://bs5yynyeuj8dv" path="res://UI/Components/end_screen.tscn" id="2_p0prn"]
 [ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="3_m135w"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_m135w"]
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_dj5hn"]
 vertices = PackedVector2Array(1675, 415, 2115, 585, 1885, 585, 1275, 565, 535, 515, 1605, 415, 1775, 925, 1505, 925, 795, 875, 1205, 795, 1275, 795, 2345, 1545, 55, 1545, 915, 1455, 1535, 1395, 845, 1455, 1345, 1395, 1945, 965, 1885, 655, 2115, 655, 2175, 965, 1095, 415, 905, 415, 2345, 55, 1945, 1195, 2175, 1195, 1535, 1325, 1505, 995, 1775, 995, 1345, 1325, 1275, 1135, 1275, 1065, 535, 325, 905, 185, 1205, 565, 915, 1265, 1045, 1135, 1045, 1065, 845, 1265, 655, 1135, 655, 1065, 725, 875, 1605, 185, 1095, 185, 1675, 185, 55, 55, 305, 325, 305, 515, 795, 645, 465, 1135, 465, 1065, 725, 645)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(15, 13, 12), PackedInt32Array(16, 14, 13), PackedInt32Array(17, 6, 10, 18, 19, 20), PackedInt32Array(21, 5, 4), PackedInt32Array(22, 21, 4), PackedInt32Array(19, 1, 23, 11, 20), PackedInt32Array(24, 25, 11, 14, 26), PackedInt32Array(27, 28, 24, 26, 29, 30, 31), PackedInt32Array(22, 4, 32, 33), PackedInt32Array(18, 10, 3, 2), PackedInt32Array(28, 6, 17, 24), PackedInt32Array(4, 3, 34), PackedInt32Array(30, 29, 16, 13, 35, 36), PackedInt32Array(8, 37, 36, 35, 38, 39, 40, 41), PackedInt32Array(42, 5, 21, 43), PackedInt32Array(23, 1, 0, 44), PackedInt32Array(45, 23, 44, 42), PackedInt32Array(45, 42, 43), PackedInt32Array(45, 43, 33), PackedInt32Array(45, 33, 32, 46), PackedInt32Array(12, 45, 46, 47), PackedInt32Array(8, 7, 27, 31, 37), PackedInt32Array(4, 34, 9, 48), PackedInt32Array(39, 38, 15, 12, 49), PackedInt32Array(49, 12, 47, 50), PackedInt32Array(41, 40, 50, 47, 4, 51), PackedInt32Array(48, 51, 4), PackedInt32Array(8, 48, 9), PackedInt32Array(20, 11, 25)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(20, 13, 31, 1571, 2384, 1577, 2383, 27)])
@@ -15,109 +14,109 @@ parsed_geometry_type = 1
 source_geometry_mode = 2
 agent_radius = 15.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pcft3"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ojro4"]
 radius = 250.0
 
-[node name="Level2" type="Node2D" unique_id=592257539 node_paths=PackedStringArray("zone")]
+[node name="Level2" unique_id=1156998567 instance=ExtResource("1_p0prn")]
 script = ExtResource("1_pcft3")
-zone = NodePath("VictoryZone")
-zone_color = Color(0.38940117, 0.5364657, 0.6876897, 1)
-next_level = ExtResource("2_dj5hn")
-end_screen_scene = ExtResource("2_p0prn")
 
-[node name="DebugCamera" type="Camera2D" parent="." unique_id=146288852]
+[node name="LevelIntro" parent="LevelIntro" parent_id_path=PackedInt32Array(493173336) index="1" unique_id=1431303232]
+text = "Level 2: Counterattack
+Destroy all enemies and capture the zone at the top right of the map"
+
+[node name="DebugCamera2" type="Camera2D" parent="." index="4" unique_id=1746633196]
 anchor_mode = 0
 enabled = false
 zoom = Vector2(0.4, 0.4)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=157911830]
+[node name="CanvasModulate2" type="CanvasModulate" parent="." index="5" unique_id=1688333303]
 color = Color(0.46618086, 0.4661808, 0.4661808, 1)
 
-[node name="Map" type="Node2D" parent="." unique_id=2079773114]
+[node name="Map" type="Node2D" parent="." index="6" unique_id=1437255187]
 z_index = -1
 z_as_relative = false
 
-[node name="Floor" parent="Map" unique_id=415627875 instance=ExtResource("1_ty1rc")]
+[node name="Floor" parent="Map" index="0" unique_id=415627875 instance=ExtResource("1_ty1rc")]
 position = Vector2(-464.99994, 1245)
 scale = Vector2(167.51721, 106.6744)
 
-[node name="BorderTop" parent="Map" unique_id=1800234466 instance=ExtResource("2_m135w")]
+[node name="BorderTop" parent="Map" index="1" unique_id=1800234466 instance=ExtResource("2_m135w")]
 position = Vector2(1200, 20)
 scale = Vector2(75, 1.25)
 
-[node name="BorderBottom" parent="Map" unique_id=1374405887 instance=ExtResource("2_m135w")]
+[node name="BorderBottom" parent="Map" index="2" unique_id=738606092 instance=ExtResource("2_m135w")]
 position = Vector2(1200, 1580)
 scale = Vector2(75, 1.25)
 
-[node name="BorderLeft" parent="Map" unique_id=1347017656 instance=ExtResource("2_m135w")]
+[node name="BorderLeft" parent="Map" index="3" unique_id=761968524 instance=ExtResource("2_m135w")]
 position = Vector2(20, 800)
 scale = Vector2(1.2500001, 50)
 
-[node name="BorderRight" parent="Map" unique_id=602573716 instance=ExtResource("2_m135w")]
+[node name="BorderRight" parent="Map" index="4" unique_id=816650064 instance=ExtResource("2_m135w")]
 position = Vector2(2380, 800)
 scale = Vector2(1.2500001, 50)
 
-[node name="Cover1" parent="Map" unique_id=799541282 instance=ExtResource("2_m135w")]
+[node name="Cover1" parent="Map" index="5" unique_id=494314789 instance=ExtResource("2_m135w")]
 position = Vector2(560, 1100)
 scale = Vector2(5, 1.25)
 
-[node name="Cover2" parent="Map" unique_id=1094716023 instance=ExtResource("2_m135w")]
+[node name="Cover2" parent="Map" index="6" unique_id=98179817 instance=ExtResource("2_m135w")]
 position = Vector2(880, 1360)
 scale = Vector2(1.25, 5)
 
-[node name="Cover3" parent="Map" unique_id=1740174894 instance=ExtResource("2_m135w")]
+[node name="Cover3" parent="Map" index="7" unique_id=347357776 instance=ExtResource("2_m135w")]
 position = Vector2(760, 760)
 scale = Vector2(1.25, 6.25)
 
-[node name="Cover4" parent="Map" unique_id=1335330021 instance=ExtResource("2_m135w")]
+[node name="Cover4" parent="Map" index="8" unique_id=176383606 instance=ExtResource("2_m135w")]
 position = Vector2(1160, 1100)
 scale = Vector2(6.25, 1.25)
 
-[node name="Cover5" parent="Map" unique_id=1427956710 instance=ExtResource("2_m135w")]
+[node name="Cover5" parent="Map" index="9" unique_id=912894621 instance=ExtResource("2_m135w")]
 position = Vector2(1440, 1360)
 scale = Vector2(5, 1.25)
 
-[node name="Cover6" parent="Map" unique_id=1168525631 instance=ExtResource("2_m135w")]
+[node name="Cover6" parent="Map" index="10" unique_id=750847931 instance=ExtResource("2_m135w")]
 position = Vector2(1240, 680)
 scale = Vector2(1.25, 6.25)
 
-[node name="Cover7" parent="Map" unique_id=1853110289 instance=ExtResource("2_m135w")]
+[node name="Cover7" parent="Map" index="11" unique_id=1119846730 instance=ExtResource("2_m135w")]
 position = Vector2(1640, 960)
 scale = Vector2(7.5, 1.25)
 
-[node name="SandBang1" parent="Map" unique_id=1335162353 instance=ExtResource("2_m135w")]
+[node name="SandBang1" parent="Map" index="12" unique_id=1238351741 instance=ExtResource("2_m135w")]
 position = Vector2(1640, 300)
 scale = Vector2(1.25, 6.25)
 
-[node name="SandBang2" parent="Map" unique_id=376725429 instance=ExtResource("2_m135w")]
+[node name="SandBang2" parent="Map" index="13" unique_id=288480658 instance=ExtResource("2_m135w")]
 position = Vector2(2000, 620)
 scale = Vector2(6.25, 1.25)
 
-[node name="Building1" parent="Map" unique_id=1557164567 instance=ExtResource("2_m135w")]
+[node name="Building1" parent="Map" index="14" unique_id=1710128029 instance=ExtResource("2_m135w")]
 modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(420, 420)
 scale = Vector2(6.25, 5)
 
-[node name="Building2" parent="Map" unique_id=922762824 instance=ExtResource("2_m135w")]
+[node name="Building2" parent="Map" index="15" unique_id=1727896032 instance=ExtResource("2_m135w")]
 modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(1000, 300)
 scale = Vector2(5, 6.25)
 
-[node name="Building3" parent="Map" unique_id=1899680221 instance=ExtResource("2_m135w")]
+[node name="Building3" parent="Map" index="16" unique_id=1888689870 instance=ExtResource("2_m135w")]
 modulate = Color(0.5019608, 0.36862746, 0.29803923, 1)
 position = Vector2(2060, 1080)
 scale = Vector2(6.25, 6.25)
 
-[node name="EnemyNavigation" type="Node" parent="." unique_id=1363000084]
+[node name="EnemyNavigation" type="Node" parent="." index="7" unique_id=1927593432]
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="EnemyNavigation" unique_id=1945308078 groups=["navigation_polygon_source_geometry_group"]]
-navigation_polygon = SubResource("NavigationPolygon_m135w")
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="EnemyNavigation" index="0" unique_id=1615849386 groups=["navigation_polygon_source_geometry_group"]]
+navigation_polygon = SubResource("NavigationPolygon_dj5hn")
 
-[node name="PatrolPath1" type="Polygon2D" parent="EnemyNavigation" unique_id=1044538715 groups=["enemy_patrol_paths"]]
+[node name="PatrolPath1" type="Polygon2D" parent="EnemyNavigation" index="1" unique_id=1254518875 groups=["enemy_patrol_paths"]]
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(1593, 337, 871, 953, 615, 665, 2027, 444, 2215, 1437, 1446, 1180, 1076, 637, 344, 645, 933, 1279, 1721, 849, 151, 280)
 
-[node name="VictoryZone" type="Area2D" parent="." unique_id=1643270237]
+[node name="VictoryZone" type="Area2D" parent="." index="8" unique_id=338002246]
 unique_name_in_owner = true
 visible = false
 position = Vector2(2074, 295)
@@ -125,8 +124,8 @@ collision_layer = 0
 collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VictoryZone" unique_id=1011221962]
-shape = SubResource("CircleShape2D_pcft3")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VictoryZone" index="0" unique_id=246574936]
+shape = SubResource("CircleShape2D_ojro4")
 
-[node name="BlueTank" parent="." unique_id=432529071 instance=ExtResource("3_m135w")]
+[node name="BlueTank" parent="." index="9" unique_id=432529071 instance=ExtResource("3_m135w")]
 position = Vector2(1761, 367)
