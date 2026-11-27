@@ -1,9 +1,5 @@
 extends Control
 
-@export var level: PackedScene
-@export var level1: PackedScene
-@export var level2: PackedScene
-@export var level3: PackedScene
 @export var instructions_menu: PackedScene
 @export var VERSION_FILE: StringName = "res://.VERSION"
 

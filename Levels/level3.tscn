@@ -1,533 +1,478 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene format=3 uid="uid://kaq8oad6dkr0"]
 
-[sub_resource type="NavigationPolygon" id="NavPoly"]
-vertices = PackedVector2Array(312, 1528, 1652, 1432, 2048, 1412, 2272, 1412, 2328, 1528, 2272, 1188, 2048, 1188, 2012, 1172, 2012, 1068, 1652, 472, 2048, 412, 2272, 412, 2012, 508, 1748, 508, 2272, 188, 2328, 72, 1748, 612, 1897.43, 753.789, 1803.22, 785.203, 1572, 788, 1308, 788, 1212, 692, 1212, 428, 1388, 472, 1572, 892, 1784.95, 858.281, 1836.2, 918.07, 1748, 1068, 1652, 1208, 952, 1132, 952, 908, 1108, 1008, 1108, 1272, 934.539, 1297.04, 792, 1232, 848, 1132, 792, 1128, 848, 908, 2012, 612, 1944.31, 910.352, 1971.52, 819.641, 1388, 1432, 940.969, 1459.83, 272, 72, 2048, 188, 900.656, 179.547, 1388, 1208, 1212, 1272, 1212, 1008, 1308, 892, 987.523, 1385.34, 820.969, 1331.99, 408, 1232, 1652, 248, 984.039, 221.242, 1388, 248, 952, 792, 1108, 692, 952, 568, 1108, 428, 792, 572, 792, 468, 848, 568, 848, 792, 1748, 1172, 408, 572, 312, 808, 272, 808, 408, 468, 974.648, 315.078, 408, 1128, 830.211, 1442.79, 810.633, 220.469, 820.117, 305.844, 886.617, 339.094)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(9, 10, 11, 12, 13), PackedInt32Array(11, 14, 15, 4), PackedInt32Array(16, 17, 18, 19, 20, 21, 22, 23), PackedInt32Array(24, 19, 25, 26, 27, 28), PackedInt32Array(29, 30, 31, 32), PackedInt32Array(29, 32, 33, 34, 35), PackedInt32Array(35, 34, 36, 37), PackedInt32Array(11, 38, 12), PackedInt32Array(39, 40, 11, 5, 8), PackedInt32Array(41, 1, 0, 42), PackedInt32Array(43, 15, 14, 44, 45), PackedInt32Array(46, 41, 47, 48, 49), PackedInt32Array(47, 41, 42, 50, 32), PackedInt32Array(32, 50, 33), PackedInt32Array(34, 33, 51, 52), PackedInt32Array(10, 9, 53, 44), PackedInt32Array(54, 45, 44, 53, 55), PackedInt32Array(18, 25, 19), PackedInt32Array(56, 57, 21, 20, 49, 48, 31, 30), PackedInt32Array(57, 56, 58, 59), PackedInt32Array(60, 61, 62, 63), PackedInt32Array(7, 6, 2, 1, 28, 64), PackedInt32Array(65, 66, 67, 43, 68), PackedInt32Array(69, 54, 55, 23), PackedInt32Array(39, 8, 27, 26), PackedInt32Array(70, 66, 65, 60, 63, 37, 36), PackedInt32Array(52, 51, 71, 0), PackedInt32Array(27, 64, 28), PackedInt32Array(24, 28, 46, 49), PackedInt32Array(63, 56, 30, 37), PackedInt32Array(9, 13, 16, 23), PackedInt32Array(71, 42, 0), PackedInt32Array(52, 0, 66, 70), PackedInt32Array(61, 68, 43, 72, 73), PackedInt32Array(59, 58, 62, 61, 74), PackedInt32Array(74, 69, 23, 22), PackedInt32Array(43, 45, 72), PackedInt32Array(61, 73, 74), PackedInt32Array(4, 3, 5), PackedInt32Array(11, 4, 5), PackedInt32Array(38, 11, 40, 17), PackedInt32Array(16, 38, 17), PackedInt32Array(74, 22, 59)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(40, 40, 2360, 40, 2360, 1560, 40, 1560)])
-parsed_geometry_type = 1
-parsed_collision_mask = 9
-agent_radius = 32.0
+[ext_resource type="PackedScene" uid="uid://b51v8hr8y7gtg" path="res://Levels/level.tscn" id="1_2385j"]
+[ext_resource type="PackedScene" uid="uid://bip4l3l7pbwj5" path="res://Scenes/Tanks/blue_tank.tscn" id="3_vr4rd"]
 
-[sub_resource type="CanvasItemMaterial" id="Unshaded"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_c5oim"]
 light_mode = 1
 
-[sub_resource type="RectangleShape2D" id="Box32"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eh6o7"]
 size = Vector2(32, 32)
 
-[sub_resource type="OccluderPolygon2D" id="Occ32"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vr4rd"]
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[sub_resource type="OccluderPolygon2D" id="Occ_Rock1"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_eex2w"]
 polygon = PackedVector2Array(-50, -30, 10, -50, 55, -10, 40, 40, -30, 45, -60, 10)
 
-[sub_resource type="OccluderPolygon2D" id="Occ_Rock2"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ltsrt"]
 polygon = PackedVector2Array(-45, -25, 20, -45, 50, 5, 25, 45, -40, 35)
 
-[sub_resource type="OccluderPolygon2D" id="Occ_Rock3"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2jaon"]
 polygon = PackedVector2Array(-55, -20, 0, -45, 50, -20, 45, 30, -10, 45, -50, 25)
 
-[sub_resource type="Curve2D" id="Route_Red1"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2240, 160, 0, 0, 0, 0, 1300, 160, 0, 0, 0, 0, 2240, 160)
-}
-point_count = 3
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_2cw1i"]
+vertices = PackedVector2Array(1675, 415, 2115, 585, 1885, 585, 1275, 565, 535, 515, 1605, 415, 1775, 925, 1505, 925, 795, 875, 1205, 795, 1275, 795, 2345, 1545, 55, 1545, 915, 1455, 1535, 1395, 845, 1455, 1345, 1395, 1945, 965, 1885, 655, 2115, 655, 2175, 965, 1095, 415, 905, 415, 2345, 55, 1945, 1195, 2175, 1195, 1535, 1325, 1505, 995, 1775, 995, 1345, 1325, 1275, 1135, 1275, 1065, 535, 325, 905, 185, 1205, 565, 915, 1265, 1045, 1135, 1045, 1065, 845, 1265, 655, 1135, 655, 1065, 725, 875, 1605, 185, 1095, 185, 1675, 185, 55, 55, 305, 325, 305, 515, 795, 645, 465, 1135, 465, 1065, 725, 645)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(11, 12, 13, 14), PackedInt32Array(15, 13, 12), PackedInt32Array(16, 14, 13), PackedInt32Array(17, 6, 10, 18, 19, 20), PackedInt32Array(21, 5, 4), PackedInt32Array(22, 21, 4), PackedInt32Array(19, 1, 23, 11, 20), PackedInt32Array(24, 25, 11, 14, 26), PackedInt32Array(27, 28, 24, 26, 29, 30, 31), PackedInt32Array(22, 4, 32, 33), PackedInt32Array(18, 10, 3, 2), PackedInt32Array(28, 6, 17, 24), PackedInt32Array(4, 3, 34), PackedInt32Array(30, 29, 16, 13, 35, 36), PackedInt32Array(8, 37, 36, 35, 38, 39, 40, 41), PackedInt32Array(42, 5, 21, 43), PackedInt32Array(23, 1, 0, 44), PackedInt32Array(45, 23, 44, 42), PackedInt32Array(45, 42, 43), PackedInt32Array(45, 43, 33), PackedInt32Array(45, 33, 32, 46), PackedInt32Array(12, 45, 46, 47), PackedInt32Array(8, 7, 27, 31, 37), PackedInt32Array(4, 34, 9, 48), PackedInt32Array(39, 38, 15, 12, 49), PackedInt32Array(49, 12, 47, 50), PackedInt32Array(41, 40, 50, 47, 4, 51), PackedInt32Array(48, 51, 4), PackedInt32Array(8, 48, 9), PackedInt32Array(20, 11, 25)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(20, 13, 31, 1571, 2384, 1577, 2383, 27)])
+parsed_geometry_type = 1
+source_geometry_mode = 2
+agent_radius = 15.0
 
-[sub_resource type="Curve2D" id="Route_Red2"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2300, 500, 0, 0, 0, 0, 1300, 500, 0, 0, 0, 0, 1300, 700, 0, 0, 0, 0, 2300, 700, 0, 0, 0, 0, 2300, 500)
-}
-point_count = 5
+[node name="Level" unique_id=1156998567 instance=ExtResource("1_2385j")]
 
-[sub_resource type="Curve2D" id="Route_Red3"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1700, 640, 0, 0, 0, 0, 1700, 1040, 0, 0, 0, 0, 1700, 640)
-}
-point_count = 3
+[node name="Map" type="Node2D" parent="." index="4" unique_id=2100935697]
 
-[sub_resource type="Curve2D" id="Route_Red4"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2300, 840, 0, 0, 0, 0, 2020, 840, 0, 0, 0, 0, 2300, 840)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Route_Red5"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2300, 980, 0, 0, 0, 0, 1300, 980, 0, 0, 0, 0, 2300, 980)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Route_Red6"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2300, 1180, 0, 0, 0, 0, 1300, 1180, 0, 0, 0, 0, 2300, 1180)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Route_Red7"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2240, 1480, 0, 0, 0, 0, 1100, 1480, 0, 0, 0, 0, 2240, 1480)
-}
-point_count = 3
-
-[node name="Level3" type="Node2D"]
-
-[node name="Floor" type="Polygon2D" parent="."]
+[node name="Floor" type="Polygon2D" parent="Map" index="0" unique_id=377447451]
 color = Color(0.337, 0.502, 0.259, 1)
 polygon = PackedVector2Array(0, 0, 2400, 0, 2400, 1600, 0, 1600)
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-navigation_polygon = SubResource("NavPoly")
+[node name="Walls" type="Node2D" parent="Map" index="1" unique_id=1714673436]
 
-[node name="Walls" type="Node2D" parent="NavigationRegion2D"]
-
-[node name="BorderTop" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="BorderTop" type="StaticBody2D" parent="Map/Walls" index="0" unique_id=734787977]
 position = Vector2(1200, 20)
 scale = Vector2(75, 1.25)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/BorderTop"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/BorderTop" index="0" unique_id=1614489419]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/BorderTop"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/BorderTop" index="1" unique_id=1007136211]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/BorderTop"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/BorderTop" index="2" unique_id=1592609312]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="BorderBottom" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="BorderBottom" type="StaticBody2D" parent="Map/Walls" index="1" unique_id=1441441255]
 position = Vector2(1200, 1580)
 scale = Vector2(75, 1.25)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/BorderBottom"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/BorderBottom" index="0" unique_id=75371796]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/BorderBottom"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/BorderBottom" index="1" unique_id=1383649385]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/BorderBottom"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/BorderBottom" index="2" unique_id=1212123776]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="BorderLeft" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="BorderLeft" type="StaticBody2D" parent="Map/Walls" index="2" unique_id=1520771000]
 position = Vector2(20, 800)
 scale = Vector2(1.25, 50)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/BorderLeft"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/BorderLeft" index="0" unique_id=1458260700]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/BorderLeft"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/BorderLeft" index="1" unique_id=1668567491]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/BorderLeft"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/BorderLeft" index="2" unique_id=2034564514]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="BorderRight" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="BorderRight" type="StaticBody2D" parent="Map/Walls" index="3" unique_id=291504548]
 position = Vector2(2380, 800)
 scale = Vector2(1.25, 50)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/BorderRight"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/BorderRight" index="0" unique_id=1198715769]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/BorderRight"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/BorderRight" index="1" unique_id=1975080562]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/BorderRight"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/BorderRight" index="2" unique_id=544508257]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="BaseNorth" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="BaseNorth" type="StaticBody2D" parent="Map/Walls" index="4" unique_id=1192223943]
 position = Vector2(600, 520)
 scale = Vector2(10, 1.25)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/BaseNorth"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/BaseNorth" index="0" unique_id=1641599626]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/BaseNorth"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/BaseNorth" index="1" unique_id=563860442]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/BaseNorth"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/BaseNorth" index="2" unique_id=700789869]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="BaseSouth" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="BaseSouth" type="StaticBody2D" parent="Map/Walls" index="5" unique_id=222102840]
 position = Vector2(600, 1180)
 scale = Vector2(10, 1.25)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/BaseSouth"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/BaseSouth" index="0" unique_id=1256086962]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/BaseSouth"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/BaseSouth" index="1" unique_id=578173826]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/BaseSouth"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/BaseSouth" index="2" unique_id=920196873]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="BaseEast1" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="BaseEast1" type="StaticBody2D" parent="Map/Walls" index="6" unique_id=1212741380]
 position = Vector2(900, 680)
 scale = Vector2(1.25, 5)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/BaseEast1"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/BaseEast1" index="0" unique_id=1757393710]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/BaseEast1"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/BaseEast1" index="1" unique_id=2066369927]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/BaseEast1"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/BaseEast1" index="2" unique_id=1279318678]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="BaseEast2" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="BaseEast2" type="StaticBody2D" parent="Map/Walls" index="7" unique_id=577629294]
 position = Vector2(900, 1020)
 scale = Vector2(1.25, 5)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/BaseEast2"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/BaseEast2" index="0" unique_id=1861894091]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/BaseEast2"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/BaseEast2" index="1" unique_id=1287793519]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/BaseEast2"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/BaseEast2" index="2" unique_id=151990281]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="Cover1" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="Cover1" type="StaticBody2D" parent="Map/Walls" index="8" unique_id=2056579493]
 position = Vector2(1160, 560)
 scale = Vector2(1.25, 6.25)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/Cover1"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/Cover1" index="0" unique_id=1120963958]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/Cover1"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Cover1" index="1" unique_id=1390882876]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/Cover1"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Cover1" index="2" unique_id=349940995]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="Cover2" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="Cover2" type="StaticBody2D" parent="Map/Walls" index="9" unique_id=1945577195]
 position = Vector2(1160, 1140)
 scale = Vector2(1.25, 6.25)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/Cover2"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/Cover2" index="0" unique_id=1445400816]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/Cover2"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Cover2" index="1" unique_id=474211436]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/Cover2"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Cover2" index="2" unique_id=529029521]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="Cover3" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="Cover3" type="StaticBody2D" parent="Map/Walls" index="10" unique_id=765356565]
 position = Vector2(1440, 840)
 scale = Vector2(6.25, 1.25)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/Cover3"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/Cover3" index="0" unique_id=1801783341]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/Cover3"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Cover3" index="1" unique_id=889377536]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/Cover3"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Cover3" index="2" unique_id=916337272]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="Cover4" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="Cover4" type="StaticBody2D" parent="Map/Walls" index="11" unique_id=2007233031]
 position = Vector2(1880, 560)
 scale = Vector2(6.25, 1.25)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/Cover4"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/Cover4" index="0" unique_id=1336380231]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/Cover4"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Cover4" index="1" unique_id=1029156183]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/Cover4"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Cover4" index="2" unique_id=840453692]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="Cover5" type="StaticBody2D" parent="NavigationRegion2D/Walls"]
+[node name="Cover5" type="StaticBody2D" parent="Map/Walls" index="12" unique_id=733535388]
 position = Vector2(1880, 1120)
 scale = Vector2(6.25, 1.25)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Walls/Cover5"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Walls/Cover5" index="0" unique_id=1504243792]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.549, 0.573, 0.612, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Walls/Cover5"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Walls/Cover5" index="1" unique_id=1089864298]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Walls/Cover5"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Walls/Cover5" index="2" unique_id=1577408124]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="River" type="Node2D" parent="NavigationRegion2D"]
+[node name="River" type="Node2D" parent="Map" index="2" unique_id=2053648912]
 
-[node name="River1" type="StaticBody2D" parent="NavigationRegion2D/River"]
+[node name="River1" type="StaticBody2D" parent="Map/River" index="0" unique_id=339723159]
 position = Vector2(140, 440)
 scale = Vector2(6.25, 25)
 collision_layer = 8
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/River/River1"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/River/River1" index="0" unique_id=1256276705]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.188, 0.424, 0.745, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/River/River1"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/River/River1" index="1" unique_id=1750447825]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="River2" type="StaticBody2D" parent="NavigationRegion2D/River"]
+[node name="River2" type="StaticBody2D" parent="Map/River" index="1" unique_id=1243565182]
 position = Vector2(160, 1200)
 scale = Vector2(7.5, 22.5)
 collision_layer = 8
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/River/River2"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/River/River2" index="0" unique_id=560954404]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.188, 0.424, 0.745, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/River/River2"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/River/River2" index="1" unique_id=1023439894]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="Buildings" type="Node2D" parent="NavigationRegion2D"]
+[node name="Buildings" type="Node2D" parent="Map" index="3" unique_id=219069535]
 
-[node name="Building1" type="StaticBody2D" parent="NavigationRegion2D/Buildings"]
+[node name="Building1" type="StaticBody2D" parent="Map/Buildings" index="0" unique_id=1142081859]
 position = Vector2(1520, 360)
 scale = Vector2(6.25, 5)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Buildings/Building1"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Buildings/Building1" index="0" unique_id=772220560]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.502, 0.369, 0.298, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Buildings/Building1"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Buildings/Building1" index="1" unique_id=1508674727]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Buildings/Building1"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Buildings/Building1" index="2" unique_id=1680721163]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="Building2" type="StaticBody2D" parent="NavigationRegion2D/Buildings"]
+[node name="Building2" type="StaticBody2D" parent="Map/Buildings" index="1" unique_id=1488963854]
 position = Vector2(1520, 1320)
 scale = Vector2(6.25, 5)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Buildings/Building2"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Buildings/Building2" index="0" unique_id=1821629866]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.502, 0.369, 0.298, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Buildings/Building2"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Buildings/Building2" index="1" unique_id=2102108804]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Buildings/Building2"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Buildings/Building2" index="2" unique_id=372826326]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="Building3" type="StaticBody2D" parent="NavigationRegion2D/Buildings"]
+[node name="Building3" type="StaticBody2D" parent="Map/Buildings" index="2" unique_id=454381008]
 position = Vector2(2160, 300)
 scale = Vector2(5, 5)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Buildings/Building3"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Buildings/Building3" index="0" unique_id=696933241]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.502, 0.369, 0.298, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Buildings/Building3"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Buildings/Building3" index="1" unique_id=192174623]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Buildings/Building3"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Buildings/Building3" index="2" unique_id=1426039301]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="Building4" type="StaticBody2D" parent="NavigationRegion2D/Buildings"]
+[node name="Building4" type="StaticBody2D" parent="Map/Buildings" index="3" unique_id=248307427]
 position = Vector2(2160, 1300)
 scale = Vector2(5, 5)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Buildings/Building4"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Buildings/Building4" index="0" unique_id=1798643238]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.502, 0.369, 0.298, 1)
 polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NavigationRegion2D/Buildings/Building4"]
-shape = SubResource("Box32")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Buildings/Building4" index="1" unique_id=1911729809]
+shape = SubResource("RectangleShape2D_eh6o7")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Buildings/Building4"]
-occluder = SubResource("Occ32")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Buildings/Building4" index="2" unique_id=163118037]
+occluder = SubResource("OccluderPolygon2D_vr4rd")
 
-[node name="Rocks" type="Node2D" parent="NavigationRegion2D"]
+[node name="Rocks" type="Node2D" parent="Map" index="4" unique_id=677428550]
 
-[node name="Rock1" type="StaticBody2D" parent="NavigationRegion2D/Rocks"]
+[node name="Rock1" type="StaticBody2D" parent="Map/Rocks" index="0" unique_id=66763678]
 position = Vector2(1880, 840)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Rocks/Rock1"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Rocks/Rock1" index="0" unique_id=1072267959]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.376, 0.345, 0.314, 1)
 polygon = PackedVector2Array(-50, -30, 10, -50, 55, -10, 40, 40, -30, 45, -60, 10)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/Rocks/Rock1"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Rocks/Rock1" index="1" unique_id=1025631218]
 polygon = PackedVector2Array(-50, -30, 10, -50, 55, -10, 40, 40, -30, 45, -60, 10)
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Rocks/Rock1"]
-occluder = SubResource("Occ_Rock1")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Rocks/Rock1" index="2" unique_id=588894818]
+occluder = SubResource("OccluderPolygon2D_eex2w")
 
-[node name="Rock2" type="StaticBody2D" parent="NavigationRegion2D/Rocks"]
+[node name="Rock2" type="StaticBody2D" parent="Map/Rocks" index="1" unique_id=1127690988]
 position = Vector2(900, 1380)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Rocks/Rock2"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Rocks/Rock2" index="0" unique_id=1874256027]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.376, 0.345, 0.314, 1)
 polygon = PackedVector2Array(-45, -25, 20, -45, 50, 5, 25, 45, -40, 35)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/Rocks/Rock2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Rocks/Rock2" index="1" unique_id=34513033]
 polygon = PackedVector2Array(-45, -25, 20, -45, 50, 5, 25, 45, -40, 35)
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Rocks/Rock2"]
-occluder = SubResource("Occ_Rock2")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Rocks/Rock2" index="2" unique_id=1625922143]
+occluder = SubResource("OccluderPolygon2D_ltsrt")
 
-[node name="Rock3" type="StaticBody2D" parent="NavigationRegion2D/Rocks"]
+[node name="Rock3" type="StaticBody2D" parent="Map/Rocks" index="2" unique_id=828259516]
 position = Vector2(900, 260)
 collision_mask = 0
 
-[node name="Visual" type="Polygon2D" parent="NavigationRegion2D/Rocks/Rock3"]
-material = SubResource("Unshaded")
+[node name="Visual" type="Polygon2D" parent="Map/Rocks/Rock3" index="0" unique_id=899286021]
+material = SubResource("CanvasItemMaterial_c5oim")
 color = Color(0.376, 0.345, 0.314, 1)
 polygon = PackedVector2Array(-55, -20, 0, -45, 50, -20, 45, 30, -10, 45, -50, 25)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="NavigationRegion2D/Rocks/Rock3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Rocks/Rock3" index="1" unique_id=418694065]
 polygon = PackedVector2Array(-55, -20, 0, -45, 50, -20, 45, 30, -10, 45, -50, 25)
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="NavigationRegion2D/Rocks/Rock3"]
-occluder = SubResource("Occ_Rock3")
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/Rocks/Rock3" index="2" unique_id=1202369236]
+occluder = SubResource("OccluderPolygon2D_2jaon")
 
-[node name="PlayerSpawn" type="Marker2D" parent="."]
+[node name="PlayerSpawn" type="Marker2D" parent="." index="5" unique_id=25107804]
 position = Vector2(600, 850)
 gizmo_extents = 48.0
 
-[node name="Pickups" type="Node2D" parent="."]
+[node name="EnemyNavigation" type="Node" parent="." index="6" unique_id=1804626460]
 
-[node name="SpareParts1" type="Marker2D" parent="Pickups"]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="EnemyNavigation" index="0" unique_id=1477765217 groups=["navigation_polygon_source_geometry_group"]]
+navigation_polygon = SubResource("NavigationPolygon_2cw1i")
+
+[node name="PatrolPath1" type="Polygon2D" parent="EnemyNavigation" index="1" unique_id=688783428 groups=["enemy_patrol_paths"]]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(1593, 337, 871, 953, 615, 665, 2027, 444, 2215, 1437, 1446, 1180, 1076, 637, 344, 645, 933, 1279, 1721, 849, 151, 280)
+
+[node name="Pickups" type="Node2D" parent="." index="7" unique_id=947402576]
+
+[node name="SpareParts1" type="Marker2D" parent="Pickups" index="0" unique_id=116178176]
 position = Vector2(560, 640)
 gizmo_extents = 24.0
 
-[node name="Ammo1" type="Marker2D" parent="Pickups"]
+[node name="Ammo1" type="Marker2D" parent="Pickups" index="1" unique_id=674719942]
 position = Vector2(560, 1060)
 gizmo_extents = 24.0
 
-[node name="Ammo2" type="Marker2D" parent="Pickups"]
+[node name="Ammo2" type="Marker2D" parent="Pickups" index="2" unique_id=1162414316]
 position = Vector2(760, 850)
 gizmo_extents = 24.0
 
-[node name="SpareParts2" type="Marker2D" parent="Pickups"]
+[node name="SpareParts2" type="Marker2D" parent="Pickups" index="3" unique_id=288108154]
 position = Vector2(1280, 1300)
 gizmo_extents = 24.0
 
-[node name="Ammo3" type="Marker2D" parent="Pickups"]
+[node name="Ammo3" type="Marker2D" parent="Pickups" index="4" unique_id=891725723]
 position = Vector2(1280, 200)
 gizmo_extents = 24.0
 
-[node name="ATGuns" type="Node2D" parent="."]
+[node name="ATGuns" type="Node2D" parent="." index="8" unique_id=496300165]
 
-[node name="AT1" type="Marker2D" parent="ATGuns"]
+[node name="AT1" type="Marker2D" parent="ATGuns" index="0" unique_id=1117618933]
 position = Vector2(1960, 360)
 rotation = 3.14159
 gizmo_extents = 32.0
 
-[node name="AT2" type="Marker2D" parent="ATGuns"]
+[node name="AT2" type="Marker2D" parent="ATGuns" index="1" unique_id=1688151099]
 position = Vector2(1960, 1340)
 rotation = 3.14159
 gizmo_extents = 32.0
 
-[node name="RedTanks" type="Node2D" parent="."]
+[node name="RedTanks" type="Node2D" parent="." index="9" unique_id=1532798128]
 
-[node name="Red1" type="Marker2D" parent="RedTanks"]
+[node name="Red1" type="Marker2D" parent="RedTanks" index="0" unique_id=860930376]
 position = Vector2(2240, 160)
 rotation = 3.14159
 gizmo_extents = 40.0
 
-[node name="Red2" type="Marker2D" parent="RedTanks"]
+[node name="Red2" type="Marker2D" parent="RedTanks" index="1" unique_id=262641029]
 position = Vector2(2300, 500)
 rotation = 3.14159
 gizmo_extents = 40.0
 
-[node name="Red3" type="Marker2D" parent="RedTanks"]
+[node name="Red3" type="Marker2D" parent="RedTanks" index="2" unique_id=1539392832]
 position = Vector2(1700, 640)
 rotation = 3.14159
 gizmo_extents = 40.0
 
-[node name="Red4" type="Marker2D" parent="RedTanks"]
+[node name="Red4" type="Marker2D" parent="RedTanks" index="3" unique_id=28115559]
 position = Vector2(2300, 840)
 rotation = 3.14159
 gizmo_extents = 40.0
 
-[node name="Red5" type="Marker2D" parent="RedTanks"]
+[node name="Red5" type="Marker2D" parent="RedTanks" index="4" unique_id=1219037566]
 position = Vector2(2300, 980)
 rotation = 3.14159
 gizmo_extents = 40.0
 
-[node name="Red6" type="Marker2D" parent="RedTanks"]
+[node name="Red6" type="Marker2D" parent="RedTanks" index="5" unique_id=1012429545]
 position = Vector2(2300, 1180)
 rotation = 3.14159
 gizmo_extents = 40.0
 
-[node name="Red7" type="Marker2D" parent="RedTanks"]
+[node name="Red7" type="Marker2D" parent="RedTanks" index="6" unique_id=11694593]
 position = Vector2(2240, 1480)
 rotation = 3.14159
 gizmo_extents = 40.0
 
-[node name="PatrolRoutes" type="Node2D" parent="."]
-
-[node name="Red1Route" type="Path2D" parent="PatrolRoutes"]
-curve = SubResource("Route_Red1")
-
-[node name="Red2Route" type="Path2D" parent="PatrolRoutes"]
-curve = SubResource("Route_Red2")
-
-[node name="Red3Route" type="Path2D" parent="PatrolRoutes"]
-curve = SubResource("Route_Red3")
-
-[node name="Red4Route" type="Path2D" parent="PatrolRoutes"]
-curve = SubResource("Route_Red4")
-
-[node name="Red5Route" type="Path2D" parent="PatrolRoutes"]
-curve = SubResource("Route_Red5")
-
-[node name="Red6Route" type="Path2D" parent="PatrolRoutes"]
-curve = SubResource("Route_Red6")
-
-[node name="Red7Route" type="Path2D" parent="PatrolRoutes"]
-curve = SubResource("Route_Red7")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color(0.22, 0.25, 0.32, 1)
+[node name="BlueTank" parent="." index="10" unique_id=432529071 instance=ExtResource("3_vr4rd")]
+position = Vector2(314, 393)
